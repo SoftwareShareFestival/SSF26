@@ -48,6 +48,8 @@ src/
 ## 작업 기준
 
 - 페이지 단위 UI는 `src/pages`에 둡니다.
+- `src/pages` 파일에는 직접적인 화면 마크업을 많이 넣지 않고, 페이지 조합과 데이터 연결만 둡니다.
+- 실제 화면 구성은 `src/components` 하위로 분리해서 페이지에서 불러옵니다.
 - 여러 페이지에서 재사용되는 UI는 `src/components`에 둡니다.
 - 라우터 설정은 `src/app/router.jsx`에서 관리합니다.
 - 레이아웃은 `src/layouts`에 둡니다.
