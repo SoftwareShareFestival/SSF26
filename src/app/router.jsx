@@ -4,16 +4,15 @@ import HomePage from "../pages/HomePage";
 import NotFoundPage from "../pages/NotFoundPage";
 
 export const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <RootLayout />,
-    children: [
-      {
-        index: true,
-        element: <HomePage />,
-      },
-    ],
-    errorElement: <NotFoundPage />,
-  },
+	{
+		path: "/",
+		element: <RootLayout />,
+		children: [
+			{
+				index: true,
+				element: <HomePage />,
+			},
+		],
+		errorElement: <NotFoundPage />,
+	},
 ]);
-

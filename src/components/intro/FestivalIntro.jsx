@@ -1,7 +1,7 @@
 function FestivalIntro() {
 	return (
-		<div className="w-full flex bg-[#F0EFF3] items-center justify-center flex-col p-6 py-16 lg:py-[97px] lg:px-[225px] gap-16 lg:gap-[76px]">
-			<div className="w-full flex flex-col-reverse lg:flex-row justify-between items-center gap-6 lg:gap-0">
+		<div className="text-balance w-full flex bg-[#F0EFF3] items-center justify-center flex-col p-6 py-16 lg:py-[97px] lg:px-[225px] gap-16 lg:gap-[76px]">
+			<div className="w-full max-w-[var(--content-max)] px-[var(--content-pad)] flex flex-col-reverse lg:flex-row justify-between items-center gap-6 lg:gap-0">
 				<div className="flex flex-col justify-center items-center lg:items-start gap-2 text-center lg:text-left">
 					<div className="text-black font-bold text-2xl break-keep">
 						각 동아리에서 준비한 체계적인 커리큘럼을 경험해보세요!
@@ -13,7 +13,7 @@ function FestivalIntro() {
 				</div>
 				<img className="h-[160px] lg:h-[226px] object-contain" src="/example.jpg" />
 			</div>
-			<div className="w-full flex flex-col-reverse lg:flex-row justify-between items-center gap-6 lg:gap-0">
+			<div className="w-full max-w-[var(--content-max)] px-[var(--content-pad)] flex flex-col-reverse lg:flex-row justify-between items-center gap-6 lg:gap-0">
 				<div className="flex flex-col justify-center items-center lg:items-start gap-2 text-center lg:text-left">
 					<div className="text-black font-bold text-2xl break-keep">
 						각 동아리에서 준비한 굿즈와 간식이 있어요!
@@ -24,7 +24,7 @@ function FestivalIntro() {
 				</div>
 				<img className="h-[160px] lg:h-[226px] object-contain" src="/example.jpg" />
 			</div>
-			<div className="w-full flex flex-col-reverse lg:flex-row justify-between items-center gap-6 lg:gap-0">
+			<div className="w-full max-w-[var(--content-max)] px-[var(--content-pad)] flex flex-col-reverse lg:flex-row justify-between items-center gap-6 lg:gap-0">
 				<div className="flex flex-col justify-center items-center lg:items-start gap-2 text-center lg:text-left">
 					<div className="text-black font-bold text-2xl break-keep">
 						재학생들과 직접 소통할 수 있어요!
