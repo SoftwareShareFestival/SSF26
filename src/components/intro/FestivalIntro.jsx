@@ -12,7 +12,6 @@ function FestivalIntro() {
 					</div>
 				</div>
 				<img className="h-[160px] lg:h-[226px] object-contain" src="/example.jpg" />
-				;
 			</div>
 
 			<div className="w-full max-w-[var(--content-max)] px-[var(--content-pad)] flex flex-col-reverse lg:flex-row justify-between items-center gap-10 lg:gap-12">
@@ -25,7 +24,6 @@ function FestivalIntro() {
 					</div>
 				</div>
 				<img className="h-[160px] lg:h-[226px] object-contain" src="/example.jpg" />
-				;
 			</div>
 
 			<div className="w-full max-w-[var(--content-max)] px-[var(--content-pad)] flex flex-col-reverse lg:flex-row justify-between items-center gap-10 lg:gap-12">
@@ -39,7 +37,6 @@ function FestivalIntro() {
 					</div>
 				</div>
 				<img className="h-[160px] lg:h-[226px] object-contain" src="/example.jpg" />
-				;
 			</div>
 		</div>
 	);
