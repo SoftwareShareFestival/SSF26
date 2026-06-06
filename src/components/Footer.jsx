@@ -29,7 +29,7 @@ function Footer() {
 	return (
 		<div className="flex justify-center w-full items-center flex-col">
 			<div className="w-full max-w-[var(--content-max)] px-[var(--content-pad)]">
-				<div className="flex flex-col lg:flex-row items-start lg:items-center w-full h-fit bg-[#F0EFF3] box-border py-10 px-6 lg:py-[88px] lg:px-[142px] justify-between gap-10 lg:gap-0">
+				<div className="flex flex-col lg:flex-row items-center w-full h-fit bg-[#F0EFF3] box-border py-10 px-6 lg:py-[88px] lg:px-[142px] lg:justify-between gap-10 lg:gap-16">
 					<div className="order-2 flex flex-col lg:order-1 gap-5">
 						<div className="flex gap-4 w-fit">
 							<img src="/sunrint_logo.svg" />
@@ -39,10 +39,16 @@ function Footer() {
 						</div>
 						<div className="flex flex-col gap-5 h-fit font-medium text-4 leading-6 text-[#888992]">
 							<div>
-								<div>서울특별시 용산구 원효로97길 33-4 (청파동3가)</div>
-								<div>Tel. 02-717-4616 | Fax. 02-704-0960</div>
+								<div className="whitespace-nowrap">
+									서울특별시 용산구 원효로97길 33-4 (청파동3가)
+								</div>
+								<div className="whitespace-nowrap">
+									Tel. 02-717-4616 | Fax. 02-704-0960
+								</div>
 							</div>
-							<div>© 2026. 선린인터넷고등학교 All Rights Reserved.</div>
+							<div className="whitespace-nowrap">
+								© 2026. 선린인터넷고등학교 All Rights Reserved.
+							</div>
 						</div>
 					</div>
 					<div className="order-1 flex flex-col gap-8.75 text-2 lg:order-2">
@@ -65,7 +71,7 @@ function Footer() {
 								</div>
 								<div>
 									<div className="text-[#838591] font-bold">학과 총괄</div>
-									<div className="flex lg:gap-2 gap-0.5 font-medium flex-wrap">
+									<div className="flex lg:gap-2 gap-2 font-medium whitespace-nowrap">
 										<div className="text-[#171B2E]">김주영</div>
 										<div className="text-[#171B2E]">김민후</div>
 									</div>
@@ -74,7 +80,7 @@ function Footer() {
 							<div className="flex flex-col gap-6.25">
 								<div className="flex flex-col gap-1.5 font-medium">
 									<div className="text-[#838591] font-bold">디자인</div>
-									<div className="flex lg:gap-2 gap-1 font-medium flex-wrap">
+									<div className="flex lg:gap-2 gap-2 font-medium whitespace-nowrap">
 										<div className="text-[#171B2E]">조예서</div>
 										<div className="text-[#171B2E]">이승주</div>
 										<div className="text-[#171B2E]">윤서율</div>
@@ -83,7 +89,7 @@ function Footer() {
 								</div>
 								<div>
 									<div className="text-[#838591] font-bold">개발</div>
-									<div className="flex gap-2 font-medium">
+									<div className="flex gap-2 font-medium flex whitespace-nowrap">
 										<DeveloperCredit label="우작" tooltip="김우찬" />
 										<DeveloperCredit label="PIXELHIZE" tooltip="김하준" />
 										<DeveloperCredit label="김서준" tooltip="1325OK" />
