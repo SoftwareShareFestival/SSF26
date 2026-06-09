@@ -16,7 +16,7 @@ export default function HomeHeroSection() {
         />
       </div>
 
-      <div className="relative mx-auto flex min-h-[calc(100vh-88px)] w-full max-w-[var(--content-max)] items-center justify-center px-[var(--content-pad)] pb-20 pt-12 text-center md:pb-24 md:pt-16">
+      <div className="relative mx-auto flex min-h-[calc(100vh-85px)] w-full max-w-[var(--content-max)] items-center justify-center px-[var(--content-pad)] pb-20 pt-12 text-center md:pb-24 md:pt-16">
         <div className="flex max-w-4xl flex-col items-center gap-8 md:gap-10">
           <img
             src="/SSF2026.svg"
