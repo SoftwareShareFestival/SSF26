@@ -12,15 +12,15 @@ export default function CampPageContent() {
 
   const campData = [
     // 정보보호과 (Layer7, IRIS, TeamLog, Unifox)
-    { id: 1, name: 'Layer7', category: 'security', title: '게임을 분석하고 직접 핵 프로그램 만들기',logo: './logo/Layer7.png', image: 'https://placehold.co/256x362', textColor: '#000000' },
-    { id: 2, name: 'IRIS', category: 'security', title: '저예산 존윅 체험 : 직접 만드는 사격 게임',logo: './logo/IRIS.png', image: 'https://placehold.co/256x362', textColor: '#5B80D7' },
-    { id: 3, name: 'TeamLog', category: 'security', title: '님아 그 선을 넘지 마오',logo: './logo/TeamLog.png', image: 'https://placehold.co/256x362', textColor: '#EA3E45' },
-    { id: 4, name: 'Unifox', category: 'security', title: '느리면 전치 3주! : 길건너 친구들',logo: './logo/Unifox.png', image: 'https://placehold.co/256x362', textColor: '#FF6D03' },
+    { id: 1, name: 'Layer7', category: 'security', title: '게임을 분석하고 직접 핵 프로그램 만들기',logo: './logo/Layer7.png', image: './poster/layer7.png', textColor: '#000000' },
+    { id: 2, name: 'IRIS', category: 'security', title: '저예산 존윅 체험 : 직접 만드는 사격 게임',logo: './logo/IRIS.png', image: './poster/iris.png', textColor: '#5B80D7' },
+    { id: 3, name: 'TeamLog', category: 'security', title: '님아 그 선을 넘지 마오',logo: './logo/TeamLog.png', image: './poster/teamlog.png', textColor: '#EA3E45' },
+    { id: 4, name: 'Unifox', category: 'security', title: '느리면 전치 3주! : 길건너 친구들',logo: './logo/Unifox.png', image: './poster/unifox.png', textColor: '#FF6D03' },
     // 소프트웨어과 (AnA, C,real, TAPIE, PARA)
-    { id: 5, name: 'AnA', category: 'software', title: '나만의 랜덤 채팅 만들기',logo: './logo/AnA.png', image: 'https://placehold.co/256x362', textColor: '#334882' },
-    { id: 6, name: 'C,real', category: 'software', title: 'Unity로 만드는 농장 타이쿤 게임',logo: './logo/C,real.png', image: 'https://placehold.co/256x362', textColor: '#1DD8D6' },
-    { id: 7, name: 'TAPIE', category: 'software', title: '웹으로 슈의 라면가게 제작하기',logo: './logo/TAPIE.png', image: 'https://placehold.co/256x362', textColor: '#000000' },
-    { id: 8, name: 'PARA', category: 'software', title: '자기 얼굴과 비슷한 캐릭터 찾아주는 AI',logo: './logo/Para.png', image: 'https://placehold.co/256x362', textColor: '#9966FF' },
+    { id: 5, name: 'AnA', category: 'software', title: '나만의 랜덤 채팅 만들기',logo: './logo/AnA.png', image: './poster/ana.png', textColor: '#334882' },
+    { id: 6, name: 'C,real', category: 'software', title: 'Unity로 만드는 농장 타이쿤 게임',logo: './logo/C,real.png', image: './poster/creal.png', textColor: '#1DD8D6' },
+    { id: 7, name: 'TAPIE', category: 'software', title: '웹으로 슈의 라면가게 제작하기',logo: './logo/TAPIE.png', image: './poster/tapie.png', textColor: '#000000' },
+    { id: 8, name: 'PARA', category: 'software', title: '자기 얼굴과 비슷한 캐릭터 찾아주는 AI',logo: './logo/Para.png', image: './poster/para.png', textColor: '#9966FF' },
   ];
 
   const filteredCamps = selectedCategory === 'all' 
