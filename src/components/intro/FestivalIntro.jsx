@@ -11,7 +11,10 @@ function FestivalIntro() {
 						있게 쌓아갈 수 있습니다.
 					</div>
 				</div>
-				<img className="h-[160px] lg:h-[226px] object-contain" src="/example.jpg" />
+				<img
+					className="h-[160px] lg:h-[226px] object-contain"
+					src="/illusts/folders.svg"
+				/>
 			</div>
 
 			<div className="w-full max-w-[var(--content-max)] px-[var(--content-pad)] flex flex-col-reverse lg:flex-row justify-between items-center gap-10 lg:gap-12">
@@ -23,7 +26,10 @@ function FestivalIntro() {
 						동아리에 대한 이야기도 들어보고, 굿즈도 챙겨가세요!
 					</div>
 				</div>
-				<img className="h-[160px] lg:h-[226px] object-contain" src="/example.jpg" />
+				<img
+					className="h-[160px] lg:h-[226px] object-contain"
+					src="/illusts/pen.svg"
+				/>
 			</div>
 
 			<div className="w-full max-w-[var(--content-max)] px-[var(--content-pad)] flex flex-col-reverse lg:flex-row justify-between items-center gap-10 lg:gap-12">
@@ -36,7 +42,10 @@ function FestivalIntro() {
 						있습니다.
 					</div>
 				</div>
-				<img className="h-[160px] lg:h-[226px] object-contain" src="/example.jpg" />
+				<img
+					className="h-[160px] lg:h-[226px] object-contain"
+					src="/illusts/chat.svg"
+				/>
 			</div>
 		</div>
 	);
