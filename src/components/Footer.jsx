@@ -51,7 +51,7 @@ function Footer() {
 							</div>
 						</div>
 					</div>
-					<div className="order-1 flex flex-col gap-8.75 text-2 lg:order-2">
+					<div className="order-1 flex flex-col gap-6 text-2 lg:order-2">
 						<div className="flex flex-col gap-2.5">
 							<div className="text-base font-bold text-[#838591]">후원</div>
 							<div className="flex gap-2">
@@ -77,7 +77,7 @@ function Footer() {
 									</div>
 								</div>
 							</div>
-							<div className="flex flex-col gap-6.25">
+							<div className="flex flex-col gap-6">
 								<div className="flex flex-col gap-1.5 font-medium">
 									<div className="text-[#838591] font-bold">디자인</div>
 									<div className="flex lg:gap-2 gap-2 font-medium whitespace-nowrap">
@@ -90,8 +90,8 @@ function Footer() {
 								<div>
 									<div className="text-[#838591] font-bold">개발</div>
 									<div className="flex gap-2 font-medium flex whitespace-nowrap">
-										<DeveloperCredit label="우작" tooltip="김우찬" />
 										<DeveloperCredit label="PIXELHIZE" tooltip="김하준" />
+										<DeveloperCredit label="김우찬" tooltip="woojak" />
 										<DeveloperCredit label="김서준" tooltip="1325OK" />
 									</div>
 								</div>
