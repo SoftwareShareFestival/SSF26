@@ -13,7 +13,7 @@ function FestivalIntro() {
 				</div>
 				<img
 					className="h-[160px] lg:h-[226px] object-contain"
-					src="/illusts/folders.svg"
+					src="/illusts/folders.png"
 				/>
 			</div>
 
@@ -28,7 +28,7 @@ function FestivalIntro() {
 				</div>
 				<img
 					className="h-[160px] lg:h-[226px] object-contain"
-					src="/illusts/pen.svg"
+					src="/illusts/pen.png"
 				/>
 			</div>
 
@@ -44,7 +44,7 @@ function FestivalIntro() {
 				</div>
 				<img
 					className="h-[160px] lg:h-[226px] object-contain"
-					src="/illusts/chat.svg"
+					src="/illusts/chat.png"
 				/>
 			</div>
 		</div>
