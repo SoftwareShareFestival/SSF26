@@ -32,7 +32,7 @@ function Footer() {
 	return (
 		<div className="w-full bg-[#F0EFF3] py-10 lg:py-16 flex justify-center box-border">
 			<div className="w-full max-w-[var(--content-max)] px-4 sm:px-8 lg:px-[142px] grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-y-5">
-				<div className="order-1 lg:col-span-6 flex items-center lg:justify-start gap-27 w-full">
+				<div className="order-1 lg:col-span-6 flex items-center lg:justify-start w-full">
 					<div className="flex items-center gap-3">
 						<img
 							src="/logo/sunrint_logo.svg"
