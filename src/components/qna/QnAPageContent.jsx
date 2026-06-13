@@ -44,7 +44,7 @@ export default function QnAPageContent() {
 						>
 							<span>
 								캠프{" "}
-								<span className="pl-2 font-semibold text-black">
+								<span className="pl-2 font-semibold text-black break-keep">
 									참가 신청은 어떻게 하나요?
 								</span>
 							</span>
@@ -67,7 +67,7 @@ export default function QnAPageContent() {
 							</span>
 						</div>
 						{openItems.apply && (
-							<div className="px-4 pb-4 text-[#333] font-bold qna-animation">
+							<div className="px-4 pb-4 text-[#333] font-bold qna-animation break-keep">
 								참가 신청은 9월 7일까지 웹사이트에서 할 수 있습니다.
 							</div>
 						)}
@@ -82,7 +82,7 @@ export default function QnAPageContent() {
 						>
 							<span>
 								캠프{" "}
-								<span className="pl-2 font-semibold text-black">
+								<span className="pl-2 font-semibold text-black break-keep">
 									중복 지원이 가능한가요?
 								</span>
 							</span>
@@ -105,7 +105,7 @@ export default function QnAPageContent() {
 							</span>
 						</div>
 						{openItems.duplicateSupport && (
-							<div className="px-4 pb-4 text-[#333] font-bold qna-animation">
+							<div className="px-4 pb-4 text-[#333] font-bold qna-animation break-keep">
 								중복 신청은 불가능하며, 1지망부터 3지망까지 모두 서로 다른 캠프를
 								선택하셔야 합니다.
 							</div>
@@ -121,7 +121,7 @@ export default function QnAPageContent() {
 						>
 							<span>
 								캠프{" "}
-								<span className="pl-2 font-semibold text-black">
+								<span className="pl-2 font-semibold text-black break-keep">
 									참가 신청이 제대로 되었는지 궁금해요!
 								</span>
 							</span>
@@ -144,7 +144,7 @@ export default function QnAPageContent() {
 							</span>
 						</div>
 						{openItems.applyStatus && (
-							<div className="px-4 pb-4 text-[#333] font-bold qna-animation">
+							<div className="px-4 pb-4 text-[#333] font-bold qna-animation break-keep">
 								신청이 완료되면 등록하신 이메일로 확인 메일이 발송됩니다.
 							</div>
 						)}
@@ -159,7 +159,7 @@ export default function QnAPageContent() {
 						>
 							<span>
 								캠프{" "}
-								<span className="pl-2 font-semibold text-black">
+								<span className="pl-2 font-semibold text-black break-keep">
 									참가 신청 선정 결과는 어떻게 확인하나요?
 								</span>
 							</span>
@@ -182,7 +182,7 @@ export default function QnAPageContent() {
 							</span>
 						</div>
 						{openItems.resultCheck && (
-							<div className="px-4 pb-4 text-[#333] font-bold qna-animation">
+							<div className="px-4 pb-4 text-[#333] font-bold qna-animation break-keep">
 								선정 결과는 9월 9일 본교 홈페이지와 개인 메시지를 통해 안내드립니다.
 							</div>
 						)}
@@ -197,7 +197,7 @@ export default function QnAPageContent() {
 						>
 							<span>
 								캠프{" "}
-								<span className="pl-2 font-semibold text-black">
+								<span className="pl-2 font-semibold text-black break-keep">
 									캠프 날 점심이 제공 되나요?
 								</span>
 							</span>
@@ -220,14 +220,14 @@ export default function QnAPageContent() {
 							</span>
 						</div>
 						{openItems.lunch && (
-							<div className="px-4 pb-4 text-[#333] font-bold qna-animation">
+							<div className="px-4 pb-4 text-[#333] font-bold qna-animation break-keep">
 								캠프는 오후 1시부터 진행되므로 점심은 제공되지 않습니다.
 							</div>
 						)}
 					</div>
 				</div>
 
-				<div className="flex flex-col gap-2 w-full max-w-[1200px] mx-auto px-[50px] pb-50">
+				<div className="flex flex-col gap-2 w-full max-w-[1200px] mx-auto px-[50px] pb-[150px]">
 					<div className="rounded-[12px] bg-white hover:bg-[#f9f9f9]">
 						<div
 							className="flex cursor-pointer items-center justify-between p-4 text-[#8E8F96] font-bold"
@@ -235,7 +235,7 @@ export default function QnAPageContent() {
 						>
 							<span>
 								캠프{" "}
-								<span className="pl-2 font-semibold text-black">
+								<span className="pl-2 font-semibold text-black break-keep">
 									다른 궁금한 점은 어떻게 질문하나요?
 								</span>
 							</span>
@@ -258,7 +258,7 @@ export default function QnAPageContent() {
 							</span>
 						</div>
 						{openItems.otherQuestion && (
-							<div className="px-4 pb-4 text-[#333] font-bold qna-animation">
+							<div className="px-4 pb-4 text-[#333] font-bold qna-animation break-keep">
 								SSF 인스타그램(@sunrin_ssf) DM으로 문의 부탁드립니다.
 							</div>
 						)}
