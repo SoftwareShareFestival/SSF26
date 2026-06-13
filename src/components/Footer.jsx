@@ -34,7 +34,11 @@ function Footer() {
 			<div className="w-full max-w-[var(--content-max)] px-4 sm:px-8 lg:px-[142px] grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-y-5">
 				<div className="order-1 lg:col-span-6 flex items-center lg:justify-start gap-27 w-full">
 					<div className="flex items-center gap-3">
-						<img src="/sunrint_logo.svg" alt="선린 로고" className="h-6 sm:h-7" />
+						<img
+							src="/logo/sunrint_logo.svg"
+							alt="선린 로고"
+							className="h-6 sm:h-7"
+						/>
 						<span className="font-bold text-[#171B2E] text-xl sm:text-2xl break-keep">
 							선린인터넷고등학교
 						</span>
@@ -43,13 +47,22 @@ function Footer() {
 				<div className="hidden lg:flex order-2 lg:col-span-6 flex-col gap-2">
 					<span className="text-sm font-bold text-[#838591]">후원</span>
 					<div className="flex items-center gap-2">
-						<img src="/DragonMountain.png" alt="용산구청" className="h-5" />
+						<img src="/logo/DragonMountain.png" alt="용산구청" className="h-5" />
 						<span className="text-sm font-semibold text-[#202330]">용산구청</span>
 					</div>
 				</div>
-				<div className="order-2 lg:order-4 lg:col-span-6 w-full">
+				<div className="order-2 lg:order-4 lg:col-span-6 w-full flex flex-col gap-5">
+					<div className="flex lg:hidden flex-col gap-1">
+						<span className="text-xs sm:text-sm text-[#838591]">후원</span>
+						<div className="flex items-center gap-1.5">
+							<img src="/logo/DragonMountain.png" alt="용산구청" className="h-4" />
+							<span className="text-sm sm:text-base font-semibold text-[#202330]">
+								용산구청
+							</span>
+						</div>
+					</div>
 					<div className="grid grid-cols-2 gap-x-4 gap-y-6 sm:gap-x-12">
-						<div className="flex flex-col gap-5">
+						<div className="grid grid-rows-2 gap-5">
 							<div className="flex flex-col gap-1">
 								<span className="text-xs sm:text-sm font-bold text-[#838591]">
 									총괄
@@ -68,16 +81,7 @@ function Footer() {
 								</div>
 							</div>
 						</div>
-						<div className="flex flex-col gap-5">
-							<div className="flex lg:hidden flex-col gap-1">
-								<span className="text-xs sm:text-sm text-[#838591]">후원</span>
-								<div className="flex items-center gap-1.5">
-									<img src="/DragonMountain.png" alt="용산구청" className="h-4" />
-									<span className="text-sm sm:text-base font-semibold text-[#202330]">
-										용산구청
-									</span>
-								</div>
-							</div>
+						<div className="grid grid-rows-2 gap-5">
 							<div className="flex flex-col gap-1">
 								<span className="text-xs sm:text-sm font-bold text-[#838591]">
 									디자인
