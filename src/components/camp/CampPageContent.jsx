@@ -34,6 +34,9 @@ export default function CampPageContent() {
   const [itemWidth, setItemWidth] = useState(0);
   const [showTutorial, setShowTutorial] = useState(true);
   const [showRightEdgeShadow, setShowRightEdgeShadow] = useState(false);
+  const [tutorialTop, setTutorialTop] = useState(null);
+  const listLength = filteredCamps.length;
+  const safeIndex = listLength > 0 ? ((currentIndex % listLength) + listLength) % listLength : 0;
 
   useEffect(() => {
     function updateWidth() {
@@ -50,6 +53,26 @@ export default function CampPageContent() {
     return () => window.removeEventListener('resize', updateWidth);
   }, [isMobileDevice, filteredCamps.length]);
 
+  // compute tutorial arrow vertical position (center of first item image) relative to wrapper
+  useEffect(() => {
+    function updateTutorialTop() {
+      if (!containerRef.current || !itemRef.current) return;
+      const wrapper = containerRef.current.parentElement; // relative overflow-hidden
+      if (!wrapper) return;
+      const wrapperRect = wrapper.getBoundingClientRect();
+      // Prefer the image element inside the item for more accurate centering
+      const img = itemRef.current.querySelector && itemRef.current.querySelector('img');
+      const targetRect = img ? img.getBoundingClientRect() : itemRef.current.getBoundingClientRect();
+      const centerY = targetRect.top - wrapperRect.top + targetRect.height / 2;
+      const arrowHeight = 44; // matches .tutorial-arrow height
+      const topPos = Math.round(centerY - arrowHeight / 2);
+      setTutorialTop(topPos);
+    }
+    updateTutorialTop();
+    window.addEventListener('resize', updateTutorialTop);
+    return () => window.removeEventListener('resize', updateTutorialTop);
+  }, [itemWidth, isMobileDevice, filteredCamps.length, currentIndex]);
+
   // Reset index when category changes
   useEffect(() => {
     setCurrentIndex(0);
@@ -57,10 +80,20 @@ export default function CampPageContent() {
 
   // Clamp currentIndex if filtered list becomes smaller
   useEffect(() => {
-    if (currentIndex >= filteredCamps.length) {
+    if (listLength === 0) {
+      setCurrentIndex(0);
+    } else if (currentIndex >= listLength || currentIndex < 0) {
       setCurrentIndex(0);
     }
   }, [filteredCamps.length]);
+
+  // keep currentIndex within bounds when listLength changes
+  useEffect(() => {
+    if (listLength > 0) {
+      const normalized = ((currentIndex % listLength) + listLength) % listLength;
+      if (normalized !== currentIndex) setCurrentIndex(normalized);
+    }
+  }, [listLength]);
 
   const getCategoryBadge = (category) => {
     if (category === 'security') {
@@ -110,8 +143,6 @@ export default function CampPageContent() {
         .tutorial-arrow {
           position: absolute;
           right: 14px;
-          top: 50%;
-          transform: translateY(-50%);
           width: 44px;
           height: 44px;
           display: flex;
@@ -187,18 +218,18 @@ export default function CampPageContent() {
               <motion.div
                 ref={containerRef}
                 className="flex gap-6"
-                drag="x"
-                dragElastic={0.2}
+                drag={listLength > 1 ? 'x' : false}
+                dragElastic={listLength > 1 ? 0.2 : 0}
                 onDragStart={() => {
                   if (showTutorial) setShowTutorial(false);
                 }}
                 onDragEnd={(e, info) => {
-                  if (!itemWidth || filteredCamps.length === 0) return;
+                  if (!itemWidth || listLength === 0) return;
                   const moved = info.offset.x;
-                  const lastIndex = filteredCamps.length - 1;
+                  const lastIndex = listLength - 1;
                   if (moved < -50) {
                     // swipe left -> next (wrap to first)
-                    if (currentIndex < lastIndex) {
+                    if (safeIndex < lastIndex) {
                       setCurrentIndex((p) => p + 1);
                     } else {
                       // wrap to first and briefly show edge shadow
@@ -208,14 +239,14 @@ export default function CampPageContent() {
                     }
                   } else if (moved > 50) {
                     // swipe right -> prev (wrap to last)
-                    if (currentIndex > 0) {
+                    if (safeIndex > 0) {
                       setCurrentIndex((p) => p - 1);
                     } else {
                       setCurrentIndex(lastIndex);
                     }
                   }
                 }}
-                animate={{ x: itemWidth ? -currentIndex * itemWidth : 0 }}
+                animate={{ x: itemWidth ? -safeIndex * itemWidth : 0 }}
                 transition={{ type: 'spring', stiffness: 300, damping: 30 }}
                 style={{ cursor: 'grab' }}
               >
@@ -244,7 +275,7 @@ export default function CampPageContent() {
                 <>
                   <div className={`edge-shadow-right ${showRightEdgeShadow ? 'visible' : ''}`} />
                   {showTutorial && currentIndex === 0 && (
-                    <div className="tutorial-arrow" aria-hidden>
+                    <div className="tutorial-arrow" aria-hidden style={{ top: tutorialTop ? `${tutorialTop}px` : '50%' }}>
                       <svg className="arrow-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M8 4L16 12L8 20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
