@@ -38,7 +38,7 @@ export default function CampPageContent() {
 			id: 3,
 			name: "TeamLog",
 			category: "security",
-			title: "님아 그 선을 넘지 마오",
+			title: "님아 그 선을 넘지 마오 : 웹으로 만드는 타워디펜스 게임",
 			logo: "./logo/TeamLog.png",
 			image: "./poster/teamlog.png",
 			textColor: "#EA3E45",
