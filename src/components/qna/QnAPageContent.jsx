@@ -68,7 +68,7 @@ export default function QnAPageContent() {
 						</div>
 						{openItems.apply && (
 							<div className="px-4 pb-4 text-[#333] font-bold qna-animation break-keep">
-								참가 신청은 9월 7일까지 웹사이트에서 할 수 있습니다.
+								참가 신청은 9월 6일까지 웹사이트에서 할 수 있습니다.
 							</div>
 						)}
 					</div>
