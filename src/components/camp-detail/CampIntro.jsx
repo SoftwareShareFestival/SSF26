@@ -58,7 +58,7 @@ function CampIntro({ detail }) {
 							{!isMobile && (
 								<div className="flex gap-4">
 									<div
-										className="w-[47px] h-[47px] bg-[#F7347E] rounded-full flex justify-center items-center cursor-pointer"
+										className="w-[47px] h-[47px] bg-[#F7347E] rounded-full flex justify-center items-center "
 										// to="https://www.youtube.com/watch?v=RGVKqYgGlMM"
 										target="_blank"
 										rel="noopener noreferrer"
