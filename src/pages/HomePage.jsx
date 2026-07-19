@@ -23,7 +23,6 @@ export default function HomePage() {
 			<CampPageContent id={"camps"} />
 			<CapmSchedule />
 			<QnAPageContent />
-			<Footer />
 		</>
 	);
 }

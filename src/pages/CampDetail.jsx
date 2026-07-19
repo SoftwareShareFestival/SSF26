@@ -2,15 +2,16 @@ import CampIntro from "@/components/camp-detail/CampIntro";
 import ClubIntro from "@/components/camp-detail/ClubIntro";
 import OtherCamps from "@/components/camp-detail/OtherCamps";
 import { useEffect } from "react";
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 
 function CampDetail() {
+	const navigate = useNavigate();
 	const { club } = useParams();
 	const details = {
 		layer7: {
 			id: 1,
 			name: "Layer7",
-			link: "layer7", // 👈 추가됨
+			link: "layer7",
 			category: "security",
 			title: "게임을 분석하고 직접 핵 프로그램 만들기",
 			logo: "/logo/Layer7.png",
@@ -25,7 +26,7 @@ function CampDetail() {
 		iris: {
 			id: 2,
 			name: "IRIS",
-			link: "iris", // 👈 추가됨
+			link: "iris",
 			category: "security",
 			title: "저예산 존윅 체험 : 직접 만드는 사격 게임",
 			logo: "/logo/IRIS.png",
@@ -40,7 +41,7 @@ function CampDetail() {
 		teamlog: {
 			id: 3,
 			name: "TeamLog",
-			link: "teamlog", // 👈 추가됨
+			link: "teamlog",
 			category: "security",
 			title: "님아 그 선을 넘지 마오 : 웹으로 만드는 타워디펜스 게임",
 			logo: "/logo/TeamLog.png",
@@ -55,7 +56,7 @@ function CampDetail() {
 		unifox: {
 			id: 4,
 			name: "Unifox",
-			link: "unifox", // 👈 추가됨
+			link: "unifox",
 			category: "security",
 			title: "느리면 전치 3주! : 길건너 친구들",
 			logo: "/logo/Unifox.png",
@@ -70,7 +71,7 @@ function CampDetail() {
 		ana: {
 			id: 5,
 			name: "AnA",
-			link: "ana", // 👈 추가됨
+			link: "ana",
 			category: "software",
 			title: "나만의 랜덤 채팅 만들기",
 			logo: "/logo/AnA.png",
@@ -85,7 +86,7 @@ function CampDetail() {
 		creal: {
 			id: 6,
 			name: "C,real",
-			link: "creal", // 👈 추가됨 (쉼표 제거 및 소문자 변환)
+			link: "creal",
 			category: "software",
 			title: "Unity로 만드는 농장 타이쿤 게임",
 			logo: "/logo/C,real.png",
@@ -100,7 +101,7 @@ function CampDetail() {
 		tapie: {
 			id: 7,
 			name: "TAPIE",
-			link: "tapie", // 👈 추가됨
+			link: "tapie",
 			category: "software",
 			title: "웹으로 슈의 라면가게 제작하기",
 			logo: "/logo/TAPIE.png",
@@ -115,7 +116,7 @@ function CampDetail() {
 		para: {
 			id: 8,
 			name: "PARA",
-			link: "para", // 👈 추가됨
+			link: "para",
 			category: "software",
 			title: "자기 얼굴과 비슷한 캐릭터 찾아주는 AI",
 			logo: "/logo/Para.png",
