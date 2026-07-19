@@ -121,7 +121,7 @@ function CampDetail() {
 	};
 
 	return (
-		<div>
+		<div className="w-full flex flex-col justify-center items-center">
 			<CampIntro detail={details[club]} />
 			<ClubIntro detail={details[club]} />
 			<OtherCamps detail={details[club]} />
