@@ -52,7 +52,7 @@ function CampIntro({ detail }) {
 					/>
 					<div className="flex flex-col justify-end gap-4">
 						<div className="flex justify-between items-center">
-							<div className="lg:text-4xl text-xl font-bold text-[#202330] break-keep text-balance">
+							<div className="lg:text-4xl md:text-3xl text-xl font-bold text-[#202330] break-keep text-balance">
 								{detail.title}
 							</div>
 							{!isMobile && (
@@ -78,7 +78,7 @@ function CampIntro({ detail }) {
 								</div>
 							)}
 						</div>
-						<div className="lg:text-xl text-xs text-[#606061] break-keep font-medium">
+						<div className="lg:text-xl md:text-base text-xs text-[#606061] break-keep font-medium">
 							{detail.campIntro}
 						</div>
 					</div>
