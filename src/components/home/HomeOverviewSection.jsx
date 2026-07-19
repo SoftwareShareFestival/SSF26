@@ -31,7 +31,7 @@ const timelineItems = [
 
 export default function HomeOverviewSection() {
 	return (
-		<section className="bg-[#f5f3f8] text-slate-900">
+		<section className="bg-[#F0EFF3] text-slate-900">
 			<div className="mx-auto w-full max-w-[var(--content-max)] px-[var(--content-pad)] py-20 md:py-28">
 				<div className="mx-auto flex w-full max-w-5xl flex-col gap-8 md:gap-10">
 					<div className="w-full max-w-[700px] space-y-6">
