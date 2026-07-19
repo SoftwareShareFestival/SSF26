@@ -1,7 +1,8 @@
 import { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router";
 
-export default function CampPageContent() {
+export default function CampPageContent({ id }) {
 	const [selectedCategory, setSelectedCategory] = useState("all");
 	const [isMobileDevice, setIsMobileDevice] = useState(false);
 
@@ -15,78 +16,84 @@ export default function CampPageContent() {
 	}, []);
 
 	const campData = [
-		// 정보보호과 (Layer7, IRIS, TeamLog, Unifox)
 		{
 			id: 1,
 			name: "Layer7",
+			link: "layer7",
 			category: "security",
 			title: "게임을 분석하고 직접 핵 프로그램 만들기",
 			logo: "./logo/Layer7.png",
-			image: "./poster/layer7.png",
+			image: "./cover/layer7.png", // 👈 poster -> cover로 변경
 			textColor: "#000000",
 		},
 		{
 			id: 2,
 			name: "IRIS",
+			link: "iris",
 			category: "security",
 			title: "저예산 존윅 체험 : 직접 만드는 사격 게임",
 			logo: "./logo/IRIS.png",
-			image: "./poster/iris.png",
+			image: "./cover/iris.png",
 			textColor: "#5B80D7",
 		},
 		{
 			id: 3,
 			name: "TeamLog",
+			link: "teamlog",
 			category: "security",
 			title: "님아 그 선을 넘지 마오 : 웹으로 만드는 타워디펜스 게임",
 			logo: "./logo/TeamLog.png",
-			image: "./poster/teamlog.png",
+			image: "./cover/teamlog.png",
 			textColor: "#EA3E45",
 		},
 		{
 			id: 4,
 			name: "Unifox",
+			link: "unifox",
 			category: "security",
 			title: "느리면 전치 3주! : 길건너 친구들",
 			logo: "./logo/Unifox.png",
-			image: "./poster/unifox.png",
+			image: "./cover/unifox.png",
 			textColor: "#FF6D03",
 		},
-		// 소프트웨어과 (AnA, C,real, TAPIE, PARA)
 		{
 			id: 5,
 			name: "AnA",
+			link: "ana",
 			category: "software",
 			title: "나만의 랜덤 채팅 만들기",
 			logo: "./logo/AnA.png",
-			image: "./poster/ana.png",
+			image: "./cover/ana.png",
 			textColor: "#334882",
 		},
 		{
 			id: 6,
 			name: "C,real",
+			link: "creal",
 			category: "software",
 			title: "Unity로 만드는 농장 타이쿤 게임",
 			logo: "./logo/C,real.png",
-			image: "./poster/creal.png",
+			image: "./cover/creal.png",
 			textColor: "#1DD8D6",
 		},
 		{
 			id: 7,
 			name: "TAPIE",
+			link: "tapie",
 			category: "software",
 			title: "웹으로 슈의 라면가게 제작하기",
 			logo: "./logo/TAPIE.png",
-			image: "./poster/tapie.png",
+			image: "./cover/tapie.png",
 			textColor: "#000000",
 		},
 		{
 			id: 8,
 			name: "PARA",
+			link: "para",
 			category: "software",
 			title: "자기 얼굴과 비슷한 캐릭터 찾아주는 AI",
 			logo: "./logo/Para.png",
-			image: "./poster/para.png",
+			image: "./cover/para.png",
 			textColor: "#9966FF",
 		},
 	];
@@ -242,7 +249,7 @@ export default function CampPageContent() {
         }
       `}
 			</style>
-			<section className="flex flex-col gap-4 bg-[#F0EFF3]">
+			<section className="flex flex-col gap-4 bg-[#F0EFF3]" id={id}>
 				<h1 className="mt-8 text-center text-2xl md:text-3xl font-bold text-[#ff3b8d] pt-20">
 					캠프 소개
 				</h1>
@@ -323,9 +330,10 @@ export default function CampPageContent() {
 									style={{ cursor: "grab" }}
 								>
 									{filteredCamps.map((camp, idx) => (
-										<div
-											key={camp.id}
+										<Link
+											to={`/camp/${camp.link}`}
 											ref={idx === 0 ? itemRef : null}
+											key={camp.id}
 											className={
 												isMobileDevice
 													? "w-full flex-shrink-0 flex flex-col items-start text-left"
@@ -363,7 +371,7 @@ export default function CampPageContent() {
 													{camp.name}
 												</div>
 											</div>
-										</div>
+										</Link>
 									))}
 								</motion.div>
 								{isMobileDevice && (
@@ -412,7 +420,11 @@ export default function CampPageContent() {
 						<div className="grid grid-cols-4 gap-6  max-w-[980px]">
 							{filteredCamps.map((camp) => {
 								return (
-									<div key={camp.id} className="flex flex-col items-start text-left">
+									<Link
+										to={`/camp/${camp.link}`}
+										key={camp.id}
+										className="flex flex-col items-start text-left"
+									>
 										<div className="w-full aspect-[256/362] mb-3 flex items-center justify-center flex-shrink-0">
 											<img
 												src={camp.image}
@@ -440,7 +452,7 @@ export default function CampPageContent() {
 												{camp.name}
 											</div>
 										</div>
-									</div>
+									</Link>
 								);
 							})}
 						</div>
