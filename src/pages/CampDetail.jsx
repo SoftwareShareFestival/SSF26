@@ -1,6 +1,7 @@
 import CampIntro from "@/components/camp-detail/CampIntro";
 import ClubIntro from "@/components/camp-detail/ClubIntro";
 import OtherCamps from "@/components/camp-detail/OtherCamps";
+import { useEffect } from "react";
 import { useParams } from "react-router";
 
 function CampDetail() {
@@ -9,6 +10,7 @@ function CampDetail() {
 		layer7: {
 			id: 1,
 			name: "Layer7",
+			link: "layer7", // 👈 추가됨
 			category: "security",
 			title: "게임을 분석하고 직접 핵 프로그램 만들기",
 			logo: "/logo/Layer7.png",
@@ -23,6 +25,7 @@ function CampDetail() {
 		iris: {
 			id: 2,
 			name: "IRIS",
+			link: "iris", // 👈 추가됨
 			category: "security",
 			title: "저예산 존윅 체험 : 직접 만드는 사격 게임",
 			logo: "/logo/IRIS.png",
@@ -31,12 +34,13 @@ function CampDetail() {
 			campIntro:
 				"아두이노로 직접 사격게임을 만들며 IoT 기술의 원리를 체험해보세요. 센서와 제어 기술을 활용해 게임을 제작하고, 실생활에도 적용할 수 있는 IoT의 기초를 쉽고 재미있게 익힙니다.",
 			clubIntro:
-				"IRIS 동아리는 인공지능 개발과 사물인터넷(IoT)에 관심 있는 학생들이 모여 활동하는 동아리입니다. 선린인터넷고등학교에서 활동하며, 파이썬 프로그래밍 언어를 배우며 데이터 분석과 인공지능 개발의 기본 개념을 익히고, 이를 토대로 실제 인공지능 모델을 개발합니다. 또한, 아두이노를 활용한 체계적인 IoT 교육을 통해 교내에서 유일하게 IoT 분야의 심도 있는 학습 기회를 제공하며, AI와 IoT의 융합을 통해 다양한 프로젝트를 진행하고 있습니다. IRIS는 학생들에게 최신 기술과 지식을 전달하고 창의적 활동을 지원함으로써, 학생들의 성장과 발전을 도모하는 것을 목표로 합니다.",
+				"IRIS 동아리는 인공지능 개발과 사물인터넷(IoT)에 관심 있는 학생들이 모여 활동하는 동아리입니다. 선린인터넷고등학교에서 활동하며, 파이썬 프로그래밍 언어를 배우며 데이터 분석และ 인공지능 개발의 기본 개념을 익히고, 이를 토대로 실제 인공지능 모델을 개발합니다. 또한, 아두이노를 활용한 체계적인 IoT 교육을 통해 교내에서 유일하게 IoT 분야의 심도 있는 학습 기회를 제공하며, AI와 IoT의 융합을 통해 다양한 프로젝트를 진행하고 있습니다. IRIS는 학생들에게 최신 기술과 지식을 전달하고 창의적 활동을 지원함으로써, 학생들의 성장과 발전을 도모하는 것을 목표로 합니다.",
 			cover: "/cover/iris.png",
 		},
 		teamlog: {
 			id: 3,
 			name: "TeamLog",
+			link: "teamlog", // 👈 추가됨
 			category: "security",
 			title: "님아 그 선을 넘지 마오 : 웹으로 만드는 타워디펜스 게임",
 			logo: "/logo/TeamLog.png",
@@ -51,6 +55,7 @@ function CampDetail() {
 		unifox: {
 			id: 4,
 			name: "Unifox",
+			link: "unifox", // 👈 추가됨
 			category: "security",
 			title: "느리면 전치 3주! : 길건너 친구들",
 			logo: "/logo/Unifox.png",
@@ -65,6 +70,7 @@ function CampDetail() {
 		ana: {
 			id: 5,
 			name: "AnA",
+			link: "ana", // 👈 추가됨
 			category: "software",
 			title: "나만의 랜덤 채팅 만들기",
 			logo: "/logo/AnA.png",
@@ -79,6 +85,7 @@ function CampDetail() {
 		creal: {
 			id: 6,
 			name: "C,real",
+			link: "creal", // 👈 추가됨 (쉼표 제거 및 소문자 변환)
 			category: "software",
 			title: "Unity로 만드는 농장 타이쿤 게임",
 			logo: "/logo/C,real.png",
@@ -93,6 +100,7 @@ function CampDetail() {
 		tapie: {
 			id: 7,
 			name: "TAPIE",
+			link: "tapie", // 👈 추가됨
 			category: "software",
 			title: "웹으로 슈의 라면가게 제작하기",
 			logo: "/logo/TAPIE.png",
@@ -107,6 +115,7 @@ function CampDetail() {
 		para: {
 			id: 8,
 			name: "PARA",
+			link: "para", // 👈 추가됨
 			category: "software",
 			title: "자기 얼굴과 비슷한 캐릭터 찾아주는 AI",
 			logo: "/logo/Para.png",
@@ -120,11 +129,31 @@ function CampDetail() {
 		},
 	};
 
+	useEffect(() => {
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth",
+		});
+	}, [club]);
+	const userAgent = typeof navigator !== "undefined" ? navigator.userAgent : "";
+	const isMobile =
+		/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+			userAgent,
+		);
 	return (
-		<div className="w-full flex flex-col justify-center items-center">
-			<CampIntro detail={details[club]} />
-			<ClubIntro detail={details[club]} />
-			<OtherCamps detail={details[club]} />
+		<div className="max-w-[var(--content-max)] mx-auto flex flex-col justify-center ">
+			{!isMobile && (
+				<div
+					className="flex justify-start text-[#1C1B1F] text-4xl font-semibold pt-10 hover:underline underline-offset-4 decoration-black transition-all cursor-pointer"
+					onClick={() => navigate(-1)}
+				>{`<`}</div>
+			)}
+
+			<div className="flex flex-col lg:px-0 px-7.5">
+				<CampIntro detail={details[club]} id="camp-intro" />
+				<ClubIntro detail={details[club]} />
+				<OtherCamps detail={details[club]} details={details} />
+			</div>
 		</div>
 	);
 }
