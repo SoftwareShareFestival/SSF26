@@ -52,13 +52,13 @@ function CampIntro({ detail }) {
 					/>
 					<div className="flex flex-col justify-end gap-4">
 						<div className="flex justify-between items-center">
-							<div className="lg:text-4xl md:text-3xl text-xl font-bold text-[#202330] break-keep text-balance">
+							<div className="w-4/5 lg:text-4xl md:text-3xl text-xl font-bold text-[#202330] break-keep text-balance">
 								{detail.title}
 							</div>
 							{!isMobile && (
 								<div className="flex gap-4">
 									<div
-										className="w-[47px] h-[47px] bg-[#F7347E] rounded-full flex justify-center items-center "
+										className="w-[47px] h-[47px] bg-[#F7347E] rounded-full flex justify-center items-center cursor-pointer"
 										// to="https://www.youtube.com/watch?v=RGVKqYgGlMM"
 										target="_blank"
 										rel="noopener noreferrer"
