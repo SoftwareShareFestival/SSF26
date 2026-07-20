@@ -22,6 +22,8 @@ function CampDetail() {
 			clubIntro:
 				"Layer7은 정보보호 분야에 대한 관심과 열정을 가진 학생들이 모여 시스템 해킹, 웹 해킹, 리버싱 등 다양한 분야에서 활동하고 있습니다. 2001년 설립된 Layer7은 선린인터넷고등학교 정보보호과 동아리 중에서 가장 긴 역사를 지니며, 수많은 수상 실적들과 활동으로 정보보호과를 대표하는 동아리 중 하나입니다. 정보보호에 대한 전문적인 지식과 기술을 배우고, 이를 실제로 활용해 보며 끊임없이 발전하는 동아리로, 정보보호 분야에 관심이 있는 학생들에게 매우 유용한 동아리입니다.",
 			cover: "/cover/layer7.png",
+			sns: "https://www.instagram.com/sunrin_layer7",
+			web: "https://layer7.kr/",
 		},
 		iris: {
 			id: 2,
@@ -37,6 +39,8 @@ function CampDetail() {
 			clubIntro:
 				"IRIS 동아리는 인공지능 개발과 사물인터넷(IoT)에 관심 있는 학생들이 모여 활동하는 동아리입니다. 선린인터넷고등학교에서 활동하며, 파이썬 프로그래밍 언어를 배우며 데이터 분석และ 인공지능 개발의 기본 개념을 익히고, 이를 토대로 실제 인공지능 모델을 개발합니다. 또한, 아두이노를 활용한 체계적인 IoT 교육을 통해 교내에서 유일하게 IoT 분야의 심도 있는 학습 기회를 제공하며, AI와 IoT의 융합을 통해 다양한 프로젝트를 진행하고 있습니다. IRIS는 학생들에게 최신 기술과 지식을 전달하고 창의적 활동을 지원함으로써, 학생들의 성장과 발전을 도모하는 것을 목표로 합니다.",
 			cover: "/cover/iris.png",
+			sns: "https://www.instagram.com/sunrin_iris/",
+			web: "https://sunrin-iris.kr/",
 		},
 		teamlog: {
 			id: 3,
@@ -52,6 +56,8 @@ function CampDetail() {
 			clubIntro:
 				"TeamLog는 서버 프로그래밍, 네트워크, 그리고 웹 개발에 관심 있는 학생들이 모여 함께 동아리 활동을 합니다. 이 동아리에서는 HTML, CSS, JavaScript, Node.js와 같은 프론트엔드와 백엔드 기술을 배울 수 있습니다. 또한, TCP/IP, HTTP, Socket 등의 네트워크 분야와 서버 프로그래밍 분야에도 중점을 두어 이론을 배우고, 실제 서버를 구축해보며 이를 적용하는 방법을 익힐 수 있습니다. TeamLog에서는 학생들이 현대적인 IT 기술을 습득하고, 다양한 분야의 지식을 습득할 수 있는 기회를 제공합니다.",
 			cover: "/cover/teamlog.png",
+			sns: "https://www.instagram.com/sunrin_teamlog/",
+			web: "https://teamlog.kr/",
 		},
 		unifox: {
 			id: 4,
@@ -67,6 +73,8 @@ function CampDetail() {
 			clubIntro:
 				"우리는 2008년 정보보호과 선린인터넷고등학교 전공동아리로서 설립되어 개발과 보안프로그래밍 분야에서 활동하고 있습니다. 보안에 최적화된 개발 역량을 기르는 것을 목표로 다양한 분야를 탐구하며 지속적으로 성장하고 있습니다. 알고리즘부터 개발, 웹해킹까지 깊이 있게 탐구하며, 지식의 공유를 통해 함께 성장하는 우리를 만들어갑니다. Unifox는 꿈을 향한 확신을 공유하는 동아리입니다.",
 			cover: "/cover/unifox.png",
+			sns: "https://www.instagram.com/sunrin_unifox/",
+			web: "https://unifox.kr/",
 		},
 		ana: {
 			id: 5,
@@ -82,6 +90,8 @@ function CampDetail() {
 			clubIntro:
 				"AnA는 선린인터넷고등학교 소프트웨어과 서버 개발 동아리입니다. ‘어두운 곳에서 세상을 밝게 만들어 나가는 동아리’ 라는 슬로건 아래, 눈에 보이지 않는 곳에서 세상을 움직이는 기술을 개발하고 공부합니다. 백엔드 개발, 서버 구축 및 운영, 네트워킹, CI/CD 등의 다양한 서버 기술을 배우며, 부원들의 실력에 맞는 학습을 위해 기초반과 심화반 시스템을 운영하고 있습니다.",
 			cover: "/cover/ana.png",
+			sns: "https://www.instagram.com/sunrin_ana/",
+			web: "https://ana.st/",
 		},
 		creal: {
 			id: 6,
@@ -97,6 +107,8 @@ function CampDetail() {
 			clubIntro:
 				"C,REAL은 선린인터넷고등학교 유일의 게임 개발 동아리입니다. 상상을 게임을 통해 현실로 만들어내는 것—그것이 우리의 목표입니다. Unity 엔진 기반 게임 개발과 게임 디자인을 배우며, 개발자와 디자이너가 함께하는 체계적인 커리큘럼으로 모든 부원에게 공평한 기회를 제공합니다. 다양한 프로젝트와 협업을 통해 개인의 능력과 팀워크를 기르고, 부원들이 제작한 게임 작품을 만들어가고 있습니다. 여러 행사를 부원들과 함께하며 서로의 친목을 다지고 협업을 하면서 행복하고 화목한 C,REAL만의 분위기를 만들어 나갑니다.",
 			cover: "/cover/creal.png",
+			sns: "https://www.instagram.com/c.real._/",
+			web: "https://www.sunrint-creal.com/",
 		},
 		tapie: {
 			id: 7,
@@ -112,6 +124,8 @@ function CampDetail() {
 			clubIntro:
 				"웹과 앱을 개발하는 전공동아리입니다. 최신 웹, 앱 기술인 React와 React Native를 다루고, 다양한 활동과 프로젝트를 진행하며 협업 능력을 키우는 것을 중심으로 합니다.",
 			cover: "/cover/tapie.png",
+			sns: "https://www.instagram.com/sunrin_tapie/",
+			web: "https://tapie.kr/",
 		},
 		para: {
 			id: 8,
@@ -127,6 +141,8 @@ function CampDetail() {
 			clubIntro:
 				"선린인터넷고등학교 소프트웨어과 인공지능 연구/개발 동아리 PARA입니다. PARA (Project Achievement and Research AI)는 인공지능에 대해 연구하고, 개발하고, 성취하는 것을 목표로 하는 동아리입니다.",
 			cover: "/cover/para.png",
+			sns: "https://www.instagram.com/sunrin.para",
+			web: "https://sunrin-para.dev/",
 		},
 	};
 
@@ -145,12 +161,12 @@ function CampDetail() {
 		<div className="max-w-[var(--content-max)] mx-auto flex flex-col justify-center ">
 			{!isMobile && (
 				<div
-					className="w-fit flex justify-start text-[#1C1B1F] text-4xl font-semibold pt-10 hover:underline underline-offset-4 decoration-black transition-all cursor-pointer"
+					className="ml-7.5 w-fit flex justify-start text-[#1C1B1F] text-4xl font-semibold pt-10 hover:underline underline-offset-4 decoration-black transition-all cursor-pointer"
 					onClick={() => navigate(-1)}
 				>{`<`}</div>
 			)}
 
-			<div className="flex flex-col lg:px-0 px-7.5">
+			<div className="flex flex-col px-7.5">
 				<CampIntro detail={details[club]} id="camp-intro" />
 				<ClubIntro detail={details[club]} />
 				<OtherCamps detail={details[club]} details={details} />
