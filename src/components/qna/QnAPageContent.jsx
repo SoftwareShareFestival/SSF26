@@ -198,7 +198,7 @@ export default function QnAPageContent() {
 							<span>
 								캠프{" "}
 								<span className="pl-2 font-semibold text-black break-keep">
-									캠프 날 점심이 제공 되나요?
+									캠프 날 점심이 제공되나요?
 								</span>
 							</span>
 							<span
@@ -221,7 +221,7 @@ export default function QnAPageContent() {
 						</div>
 						{openItems.lunch && (
 							<div className="px-4 pb-4 text-[#333] font-bold qna-animation break-keep">
-								캠프는 오후 1시부터 진행되므로 점심은 제공되지 않습니다.
+								점심은 제공되지 않으므로 드시고 오시기 바랍니다.
 							</div>
 						)}
 					</div>
