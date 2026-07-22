@@ -37,10 +37,10 @@ function NotFoundView({ error }) {
 			<div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
 				<WanderingEyes className="h-24 w-[220px] text-[#ff3b8d]" />
 
-				<h2 className="mt-8 max-w-xl text-4xl font-semibold tracking-tight text-[#171b34] md:text-5xl">
+				<h2 className="mt-8 max-w-xl text-2xl font-semibold tracking-tight text-[#171b34] md:text-5xl">
 					{title}
 				</h2>
-				<p className="mt-4 max-w-xl text-base leading-7 text-slate-600 md:text-lg">
+				<p className="mt-4 max-w-xl text-base leading-7 text-slate-600 md:text-lg break-keep">
 					{description}
 				</p>
 

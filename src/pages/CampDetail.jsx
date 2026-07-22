@@ -2,7 +2,7 @@ import CampIntro from "@/components/camp-detail/CampIntro";
 import ClubIntro from "@/components/camp-detail/ClubIntro";
 import OtherCamps from "@/components/camp-detail/OtherCamps";
 import { useEffect } from "react";
-import { useNavigate, useParams } from "react-router";
+import { Navigate, useNavigate, useParams } from "react-router";
 
 function CampDetail() {
 	const navigate = useNavigate();
@@ -147,16 +147,22 @@ function CampDetail() {
 	};
 
 	useEffect(() => {
-		window.scrollTo({
-			top: 0,
-			behavior: "smooth",
-		});
+		if (details[club]) {
+			window.scrollTo({
+				top: 0,
+				behavior: "smooth",
+			});
+		}
 	}, [club]);
 	const userAgent = typeof navigator !== "undefined" ? navigator.userAgent : "";
 	const isMobile =
 		/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
 			userAgent,
 		);
+	if (!details[club]) {
+		return <Navigate to="/*" replace />;
+	}
+	console.log(details[club]);
 	return (
 		<div className="max-w-[var(--content-max)] mx-auto flex flex-col justify-center ">
 			{!isMobile && (
