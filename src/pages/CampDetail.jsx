@@ -168,7 +168,7 @@ function CampDetail() {
 			{!isMobile && (
 				<div
 					className="ml-7.5 w-fit flex justify-start text-[#1C1B1F] text-4xl font-semibold pt-10 hover:underline underline-offset-4 decoration-black transition-all cursor-pointer"
-					onClick={() => navigate(-1)}
+					onClick={() => navigate("/#camps")}
 				>{`<`}</div>
 			)}
 
