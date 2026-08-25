@@ -4,6 +4,41 @@ import CopyModal from "../modal/CopyModal";
 import { useState } from "react";
 import NotAvailable from "../modal/NotAvailable";
 
+const socialLinks = {
+	ana: {
+		instagram: "https://www.instagram.com/sunrin_ana/",
+		reel: "https://www.instagram.com/reel/DcaPwwjxCgQ/",
+	},
+	tapie: {
+		instagram: "https://www.instagram.com/sunrin_tapie/",
+		reel: "https://www.instagram.com/reel/DcaP9QfxeJS/",
+	},
+	para: {
+		instagram: "https://www.instagram.com/sunrin.para/",
+		reel: "https://www.instagram.com/reel/Dcab-XTxQP0/",
+	},
+	creal: {
+		instagram: "https://www.instagram.com/c.real._/",
+		reel: "https://www.instagram.com/reel/DcaQHcxxYzW/",
+	},
+	unifox: {
+		instagram: "https://www.instagram.com/sunrin_unifox/",
+		reel: "https://www.instagram.com/reel/DcaQMYUxiJ6/",
+	},
+	teamlog: {
+		instagram: "https://www.instagram.com/sunrin_teamlog/",
+		reel: "https://www.instagram.com/reel/DcaQRxOxYAl/",
+	},
+	iris: {
+		instagram: "https://www.instagram.com/sunrin_iris/",
+		reel: "https://www.instagram.com/reel/DcaQcdAxeAk/",
+	},
+	layer7: {
+		instagram: "https://www.instagram.com/sunrin_layer7/",
+		reel: "https://www.instagram.com/reel/DcaQiXtxxhu/",
+	},
+};
+
 function CampIntro({ detail }) {
 	const navigate = useNavigate();
 	const [showCopyModal, setShowCopyModal] = useState(false);
@@ -57,24 +92,22 @@ function CampIntro({ detail }) {
 							</div>
 							{!isMobile && (
 								<div className="flex gap-4">
-									<div
+									<a
 										className="w-[47px] h-[47px] bg-[#F7347E] rounded-full flex justify-center items-center cursor-pointer"
-										// to="https://www.youtube.com/watch?v=RGVKqYgGlMM"
+										href={socialLinks[detail.link]?.instagram}
 										target="_blank"
 										rel="noopener noreferrer"
-										onClick={() => setShowLinkModal(true)}
 									>
 										<img className="w-[27px] h-[27px]" src="/svg/instagram.svg" />
-									</div>
-									<div
+									</a>
+									<a
 										className="w-[47px] h-[47px] bg-[#F7347E] rounded-full flex justify-center items-center cursor-pointer"
-										// to="https://www.youtube.com/watch?v=RGVKqYgGlMM"
+										href={socialLinks[detail.link]?.reel}
 										target="_blank"
 										rel="noopener noreferrer"
-										onClick={() => setShowLinkModal(true)}
 									>
 										<img className="w-[27px] h-[27px]" src="/svg/video.svg" />
-									</div>
+									</a>
 								</div>
 							)}
 						</div>
@@ -86,27 +119,25 @@ function CampIntro({ detail }) {
 				<div className="flex lg:justify-end justify-between">
 					{isMobile && (
 						<div className="flex gap-4">
-							<div
+							<a
 								className="lg:w-[47px] lg:h-[47px] w-10 h-10 bg-[#F7347E] rounded-full flex justify-center items-center cursor-pointer"
-								// to="https://www.youtube.com/watch?v=RGVKqYgGlMM"
+								href={socialLinks[detail.link]?.instagram}
 								target="_blank"
 								rel="noopener noreferrer"
-								onClick={() => setShowLinkModal(true)}
 							>
 								<img
 									className="lg:w-[27px] lg:h-[27px] w-5 h-5"
 									src="/svg/instagram.svg"
 								/>
-							</div>
-							<div
+							</a>
+							<a
 								className="lg:w-[47px] lg:h-[47px] w-10 h-10 bg-[#F7347E] rounded-full flex justify-center items-center cursor-pointer"
-								// to="https://www.youtube.com/watch?v=RGVKqYgGlMM"
+								href={socialLinks[detail.link]?.reel}
 								target="_blank"
 								rel="noopener noreferrer"
-								onClick={() => setShowLinkModal(true)}
 							>
 								<img className="lg:w-[27px] lg:h-[27px] w-5 h-5" src="/svg/video.svg" />
-							</div>
+							</a>
 						</div>
 					)}
 					<div
