@@ -3,6 +3,16 @@ import { Link, useNavigate } from "react-router";
 import CopyModal from "../modal/CopyModal";
 import { useState } from "react";
 import NotAvailable from "../modal/NotAvailable";
+import {
+	AlertDialog,
+	AlertDialogAction,
+	AlertDialogContent,
+	AlertDialogDescription,
+	AlertDialogFooter,
+	AlertDialogHeader,
+	AlertDialogTitle,
+	AlertDialogTrigger,
+} from "@/components/animate-ui/components/radix/alert-dialog";
 
 const socialLinks = {
 	ana: {
@@ -60,6 +70,7 @@ function CampIntro({ detail }) {
 				await navigator.share(shareData);
 			} catch (error) {
 				console.log("공유가 취소되었거나 실패했습니다.", error);
+				alert("공유가 취소되었거나 실패했습니다.");
 			}
 		} else {
 			try {
@@ -74,11 +85,11 @@ function CampIntro({ detail }) {
 
 	return (
 		<div className="mt-10 lg:mb-30 mb-15">
-			<CopyModal isOpen={showCopyModal} onClose={() => setShowCopyModal(false)} />
+			{/* <CopyModal isOpen={showCopyModal} onClose={() => setShowCopyModal(false)} />
 			<NotAvailable
 				isOpen={showLinkModal}
 				onClose={() => setShowLinkModal(false)}
-			/>
+			/> */}
 			<div className="flex flex-col gap-[30px]">
 				<div className="max-w-[var(--content-max)] flex lg:flex-row flex-col w-full lg:gap-10 gap-[25px]">
 					<img
@@ -87,7 +98,7 @@ function CampIntro({ detail }) {
 					/>
 					<div className="flex flex-col justify-end gap-4">
 						<div className="flex justify-between items-center">
-							<div className="lg:text-4xl text-xl font-bold text-[#202330] break-keep text-balance">
+							<div className="w-4/5 lg:text-4xl md:text-3xl text-xl font-bold text-[#202330] break-keep text-balance">
 								{detail.title}
 							</div>
 							{!isMobile && (
@@ -111,7 +122,7 @@ function CampIntro({ detail }) {
 								</div>
 							)}
 						</div>
-						<div className="lg:text-xl text-xs text-[#606061] break-keep font-medium">
+						<div className="lg:text-xl md:text-base text-xs text-[#606061] break-keep font-medium">
 							{detail.campIntro}
 						</div>
 					</div>
@@ -140,16 +151,46 @@ function CampIntro({ detail }) {
 							</a>
 						</div>
 					)}
-					<div
-						onClick={handleShare}
-						className="cursor-pointer lg:w-[240px] lg:h-[64px] w-[138px] h-10 box-border bg-[#F7347E] px-[20px] py-[10px] rounded-4xl flex gap-[10px] flex items-center justify-center"
-					>
-						<img
-							src="/svg/share.svg"
-							className="lg:w-[25px] lg:h-[25px] w-[17px] h-[17px]"
-						/>
-						<div className="font-bold lg:text-2xl text-xs">캠프 공유하기</div>
-					</div>
+
+					<AlertDialog open={showCopyModal} onOpenChange={setShowCopyModal}>
+						<div
+							onClick={handleShare}
+							className="cursor-pointer lg:w-[240px] lg:h-[64px] w-[138px] h-10 box-border bg-[#F7347E] px-[20px] py-[10px] rounded-4xl flex gap-[10px] items-center justify-center"
+						>
+							<img
+								src="/svg/share.svg"
+								className="lg:w-[25px] lg:h-[25px] w-[17px] h-[17px]"
+								alt="Share"
+							/>
+							<div className="font-bold lg:text-2xl text-xs text-white">
+								캠프 공유하기
+							</div>
+						</div>
+
+						<AlertDialogContent className="!max-w-[440px] !rounded-[28px] !border !border-slate-200 !bg-white !p-8 !shadow-[0_28px_100px_rgba(23,27,52,0.24)]">
+							<AlertDialogHeader className="items-center text-center">
+								<img
+									src="/SSF2026.svg"
+									alt="SSF 2026"
+									className="mx-auto h-auto w-[92px]"
+								/>
+								<AlertDialogTitle className="text-2xl font-semibold tracking-tight text-[#171b34]">
+									공유
+								</AlertDialogTitle>
+								<AlertDialogDescription className="text-base leading-7 text-slate-600">
+									링크가 복사되었습니다.
+								</AlertDialogDescription>
+							</AlertDialogHeader>
+							<AlertDialogFooter className="!mt-4 !justify-center">
+								<AlertDialogAction
+									onClick={() => setShowCopyModal(false)}
+									className="!inline-flex !h-12 !min-w-[112px] !items-center !justify-center !rounded-full !border-0 !bg-[#ff3b8d] !px-6 !text-sm !font-semibold !leading-none !text-white !shadow-none transition-colors duration-200 hover:!bg-[#ff4b95] cursor-pointer"
+								>
+									확인
+								</AlertDialogAction>
+							</AlertDialogFooter>
+						</AlertDialogContent>
+					</AlertDialog>
 				</div>
 			</div>
 		</div>

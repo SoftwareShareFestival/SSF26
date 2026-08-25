@@ -24,7 +24,7 @@ function OtherCamps({ detail, details }) {
 					))}
 				</div>
 				<Link to="/#camps">
-					<div className="lg:text-xl text-base text-[#202330] font-bold hover:underline underline-offset-4 decoration-2">{`전체보기 >`}</div>
+					<div className="lg:text-xl text-base text-[#202330] font-bold hover:underline underline-offset-4 decoration-2 text-nowrap">{`전체보기 >`}</div>
 				</Link>
 			</div>
 		</div>

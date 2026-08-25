@@ -23,7 +23,7 @@ export default function CampPageContent({ id }) {
 			category: "security",
 			title: "게임을 분석하고 직접 핵 프로그램 만들기",
 			logo: "./logo/Layer7.png",
-			image: "./cover/layer7.png", // 👈 poster -> cover로 변경
+			image: "./cover/layer7.png",
 			textColor: "#000000",
 		},
 		{

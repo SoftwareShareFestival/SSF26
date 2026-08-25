@@ -22,7 +22,7 @@ export default function AppHeader() {
 					<AlertDialogTrigger asChild>
 						<button
 							type="button"
-							className="inline-flex h-11 items-center justify-center rounded-full bg-[#ff3b8d] px-5 text-sm font-bold leading-none text-white transition-colors duration-200 hover:bg-[#ff4b95]"
+							className="inline-flex h-11 items-center justify-center rounded-full bg-[#ff3b8d] px-5 text-sm font-bold leading-none text-white transition-colors duration-200 hover:bg-[#ff4b95] cursor-pointer"
 						>
 							지원하기
 						</button>
@@ -43,7 +43,7 @@ export default function AppHeader() {
 							</AlertDialogDescription>
 						</AlertDialogHeader>
 
-						<AlertDialogFooter className="!mt-8 !justify-center">
+						<AlertDialogFooter className="!mt-4 !justify-center">
 							<AlertDialogAction className="!inline-flex !h-12 !min-w-[112px] !items-center !justify-center !rounded-full !border-0 !bg-[#ff3b8d] !px-6 !text-sm !font-semibold !leading-none !text-white !shadow-none transition-colors duration-200 hover:!bg-[#ff4b95]">
 								확인
 							</AlertDialogAction>
