@@ -14,6 +14,41 @@ import {
 	AlertDialogTrigger,
 } from "@/components/animate-ui/components/radix/alert-dialog";
 
+const socialLinks = {
+	ana: {
+		instagram: "https://www.instagram.com/sunrin_ana/",
+		reel: "https://www.instagram.com/reel/DcaPwwjxCgQ/",
+	},
+	tapie: {
+		instagram: "https://www.instagram.com/sunrin_tapie/",
+		reel: "https://www.instagram.com/reel/DcaP9QfxeJS/",
+	},
+	para: {
+		instagram: "https://www.instagram.com/sunrin.para/",
+		reel: "https://www.instagram.com/reel/Dcab-XTxQP0/",
+	},
+	creal: {
+		instagram: "https://www.instagram.com/c.real._/",
+		reel: "https://www.instagram.com/reel/DcaQHcxxYzW/",
+	},
+	unifox: {
+		instagram: "https://www.instagram.com/sunrin_unifox/",
+		reel: "https://www.instagram.com/reel/DcaQMYUxiJ6/",
+	},
+	teamlog: {
+		instagram: "https://www.instagram.com/sunrin_teamlog/",
+		reel: "https://www.instagram.com/reel/DcaQRxOxYAl/",
+	},
+	iris: {
+		instagram: "https://www.instagram.com/sunrin_iris/",
+		reel: "https://www.instagram.com/reel/DcaQcdAxeAk/",
+	},
+	layer7: {
+		instagram: "https://www.instagram.com/sunrin_layer7/",
+		reel: "https://www.instagram.com/reel/DcaQiXtxxhu/",
+	},
+};
+
 function CampIntro({ detail }) {
 	const navigate = useNavigate();
 	const [showCopyModal, setShowCopyModal] = useState(false);
@@ -68,74 +103,22 @@ function CampIntro({ detail }) {
 							</div>
 							{!isMobile && (
 								<div className="flex gap-4">
-									<AlertDialog>
-										<AlertDialogTrigger aschild>
-											<div
-												className="w-[47px] h-[47px] bg-[#F7347E] rounded-full flex justify-center items-center cursor-pointer"
-												// to="https://www.youtube.com/watch?v=RGVKqYgGlMM"
-												target="_blank"
-												rel="noopener noreferrer"
-												// onClick={() => setShowLinkModal(true)}
-											>
-												<img className="w-[27px] h-[27px]" src="/svg/instagram.svg" />
-											</div>
-										</AlertDialogTrigger>
-										<AlertDialogContent className="!max-w-[440px] !rounded-[28px] !border !border-slate-200 !bg-white !p-8 !shadow-[0_28px_100px_rgba(23,27,52,0.24)]">
-											<AlertDialogHeader className="items-center text-center">
-												<img
-													src="/SSF2026.svg"
-													alt="SSF 2026"
-													className="mx-auto h-auto w-[92px]"
-												/>
-												<AlertDialogTitle className="text-2xl font-semibold tracking-tight text-[#171b34]">
-													홍보 게시글 안내
-												</AlertDialogTitle>
-												<AlertDialogDescription className="text-base leading-7 text-slate-600">
-													아직 홍보 게시글이 게시되지 않았습니다.
-												</AlertDialogDescription>
-											</AlertDialogHeader>
-
-											<AlertDialogFooter className="!mt-4 !justify-center">
-												<AlertDialogAction className="!inline-flex !h-12 !min-w-[112px] !items-center !justify-center !rounded-full !border-0 !bg-[#ff3b8d] !px-6 !text-sm !font-semibold !leading-none !text-white !shadow-none transition-colors duration-200 hover:!bg-[#ff4b95]">
-													확인
-												</AlertDialogAction>
-											</AlertDialogFooter>
-										</AlertDialogContent>
-									</AlertDialog>
-									<AlertDialog>
-										<AlertDialogTrigger aschild>
-											<div
-												className="w-[47px] h-[47px] bg-[#F7347E] rounded-full flex justify-center items-center cursor-pointer"
-												// to="https://www.youtube.com/watch?v=RGVKqYgGlMM"
-												target="_blank"
-												rel="noopener noreferrer"
-												onClick={() => setShowLinkModal(true)}
-											>
-												<img className="w-[27px] h-[27px]" src="/svg/video.svg" />
-											</div>
-										</AlertDialogTrigger>
-										<AlertDialogContent className="!max-w-[440px] !rounded-[28px] !border !border-slate-200 !bg-white !p-8 !shadow-[0_28px_100px_rgba(23,27,52,0.24)]">
-											<AlertDialogHeader className="items-center text-center">
-												<img
-													src="/SSF2026.svg"
-													alt="SSF 2026"
-													className="mx-auto h-auto w-[92px]"
-												/>
-												<AlertDialogTitle className="text-2xl font-semibold tracking-tight text-[#171b34]">
-													홍보 릴스 안내
-												</AlertDialogTitle>
-												<AlertDialogDescription className="text-base leading-7 text-slate-600">
-													아직 홍보 릴스가 게시되지 않았습니다.
-												</AlertDialogDescription>
-											</AlertDialogHeader>
-
-											<AlertDialogFooter className="!mt-4 !justify-center">
-												<AlertDialogAction className="!inline-flex !h-12 !min-w-[112px] !items-center !justify-center !rounded-full !border-0 !bg-[#ff3b8d] !px-6 !text-sm !font-semibold !leading-none !text-white !shadow-none transition-colors duration-200 hover:!bg-[#ff4b95]">
-													확인
-												</AlertDialogAction>
-											</AlertDialogFooter>
-										</AlertDialogContent>
-									</AlertDialog>
+									<a
+										className="w-[47px] h-[47px] bg-[#F7347E] rounded-full flex justify-center items-center cursor-pointer"
+										href={socialLinks[detail.link]?.instagram}
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										<img className="w-[27px] h-[27px]" src="/svg/instagram.svg" />
+									</a>
+									<a
+										className="w-[47px] h-[47px] bg-[#F7347E] rounded-full flex justify-center items-center cursor-pointer"
+										href={socialLinks[detail.link]?.reel}
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										<img className="w-[27px] h-[27px]" src="/svg/video.svg" />
+									</a>
 								</div>
 							)}
 						</div>
@@ -147,72 +130,25 @@ function CampIntro({ detail }) {
 				<div className="flex lg:justify-end justify-between">
 					{isMobile && (
 						<div className="flex gap-4">
-							<AlertDialog>
-								<AlertDialogTrigger aschild>
-									<div
-										className="w-[47px] h-[47px] bg-[#F7347E] rounded-full flex justify-center items-center cursor-pointer"
-										// to="https://www.youtube.com/watch?v=RGVKqYgGlMM"
-										target="_blank"
-										rel="noopener noreferrer"
-										// onClick={() => setShowLinkModal(true)}
-									>
-										<img className="w-[27px] h-[27px]" src="/svg/instagram.svg" />
-									</div>
-								</AlertDialogTrigger>
-								<AlertDialogContent className="!max-w-[440px] !rounded-[28px] !border !border-slate-200 !bg-white !p-8 !shadow-[0_28px_100px_rgba(23,27,52,0.24)]">
-									<AlertDialogHeader className="items-center text-center">
-										<img
-											src="/SSF2026.svg"
-											alt="SSF 2026"
-											className="mx-auto h-auto w-[92px]"
-										/>
-										<AlertDialogTitle className="text-2xl font-semibold tracking-tight text-[#171b34]">
-											홍보 게시글 안내
-										</AlertDialogTitle>
-										<AlertDialogDescription className="text-base leading-7 text-slate-600">
-											아직 홍보 게시글이 게시되지 않았습니다.
-										</AlertDialogDescription>
-									</AlertDialogHeader>
-									<AlertDialogFooter className="!mt-4 !justify-center">
-										<AlertDialogAction className="!inline-flex !h-12 !min-w-[112px] !items-center !justify-center !rounded-full !border-0 !bg-[#ff3b8d] !px-6 !text-sm !font-semibold !leading-none !text-white !shadow-none transition-colors duration-200 hover:!bg-[#ff4b95]">
-											확인
-										</AlertDialogAction>
-									</AlertDialogFooter>
-								</AlertDialogContent>
-							</AlertDialog>
-							<AlertDialog>
-								<AlertDialogTrigger aschild>
-									<div
-										className="w-[47px] h-[47px] bg-[#F7347E] rounded-full flex justify-center items-center cursor-pointer"
-										// to="https://www.youtube.com/watch?v=RGVKqYgGlMM"
-										target="_blank"
-										rel="noopener noreferrer"
-										onClick={() => setShowLinkModal(true)}
-									>
-										<img className="w-[27px] h-[27px]" src="/svg/video.svg" />
-									</div>
-								</AlertDialogTrigger>
-								<AlertDialogContent className="!max-w-[440px] !rounded-[28px] !border !border-slate-200 !bg-white !p-8 !shadow-[0_28px_100px_rgba(23,27,52,0.24)]">
-									<AlertDialogHeader className="items-center text-center">
-										<img
-											src="/SSF2026.svg"
-											alt="SSF 2026"
-											className="mx-auto h-auto w-[92px]"
-										/>
-										<AlertDialogTitle className="text-2xl font-semibold tracking-tight text-[#171b34]">
-											홍보 릴스 안내
-										</AlertDialogTitle>
-										<AlertDialogDescription className="text-base leading-7 text-slate-600">
-											아직 홍보 릴스가 게시되지 않았습니다.
-										</AlertDialogDescription>
-									</AlertDialogHeader>
-									<AlertDialogFooter className="!mt-4 !justify-center">
-										<AlertDialogAction className="!inline-flex !h-12 !min-w-[112px] !items-center !justify-center !rounded-full !border-0 !bg-[#ff3b8d] !px-6 !text-sm !font-semibold !leading-none !text-white !shadow-none transition-colors duration-200 hover:!bg-[#ff4b95]">
-											확인
-										</AlertDialogAction>
-									</AlertDialogFooter>
-								</AlertDialogContent>
-							</AlertDialog>
+							<a
+								className="lg:w-[47px] lg:h-[47px] w-10 h-10 bg-[#F7347E] rounded-full flex justify-center items-center cursor-pointer"
+								href={socialLinks[detail.link]?.instagram}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<img
+									className="lg:w-[27px] lg:h-[27px] w-5 h-5"
+									src="/svg/instagram.svg"
+								/>
+							</a>
+							<a
+								className="lg:w-[47px] lg:h-[47px] w-10 h-10 bg-[#F7347E] rounded-full flex justify-center items-center cursor-pointer"
+								href={socialLinks[detail.link]?.reel}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<img className="lg:w-[27px] lg:h-[27px] w-5 h-5" src="/svg/video.svg" />
+							</a>
 						</div>
 					)}
 
