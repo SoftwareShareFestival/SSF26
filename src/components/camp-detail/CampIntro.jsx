@@ -16,36 +16,36 @@ import {
 
 const socialLinks = {
 	ana: {
-		instagram: "https://www.instagram.com/sunrin_ana/",
-		reel: "https://www.instagram.com/reel/DcaPwwjxCgQ/",
+		post: "https://www.instagram.com/sunrin_ssf/p/DcaNjoJn3pK/",
+		video: "https://www.instagram.com/reel/DcaPwwjxCgQ/",
 	},
 	tapie: {
-		instagram: "https://www.instagram.com/sunrin_tapie/",
-		reel: "https://www.instagram.com/reel/DcaP9QfxeJS/",
+		post: "https://www.instagram.com/sunrin_ssf/p/DcaNqBqnwTY/",
+		video: "https://www.instagram.com/reel/DcaP9QfxeJS/",
 	},
 	para: {
-		instagram: "https://www.instagram.com/sunrin.para/",
-		reel: "https://www.instagram.com/reel/Dcab-XTxQP0/",
+		post: "https://www.instagram.com/p/DcaNxaJH88u/",
+		video: "https://www.instagram.com/reel/Dcab-XTxQP0/",
 	},
 	creal: {
-		instagram: "https://www.instagram.com/c.real._/",
-		reel: "https://www.instagram.com/reel/DcaQHcxxYzW/",
+		post: "https://www.instagram.com/sunrin_ssf/p/DcaN6cHH52v/",
+		video: "https://www.instagram.com/reel/DcaQHcxxYzW/",
 	},
 	unifox: {
-		instagram: "https://www.instagram.com/sunrin_unifox/",
-		reel: "https://www.instagram.com/reel/DcaQMYUxiJ6/",
+		post: "https://www.instagram.com/sunrin_ssf/p/DcaOE5vH6O_/",
+		video: "https://www.instagram.com/reel/DcaQMYUxiJ6/",
 	},
 	teamlog: {
-		instagram: "https://www.instagram.com/sunrin_teamlog/",
-		reel: "https://www.instagram.com/reel/DcaQRxOxYAl/",
+		post: "https://www.instagram.com/sunrin_ssf/p/DcaOTBinzR1/",
+		video: "https://www.instagram.com/reel/DcaQRxOxYAl/",
 	},
 	iris: {
-		instagram: "https://www.instagram.com/sunrin_iris/",
-		reel: "https://www.instagram.com/reel/DcaQcdAxeAk/",
+		post: "https://www.instagram.com/sunrin_ssf/p/DcaOesuHzfE/",
+		video: "https://www.instagram.com/reel/DcaQcdAxeAk/",
 	},
 	layer7: {
-		instagram: "https://www.instagram.com/sunrin_layer7/",
-		reel: "https://www.instagram.com/reel/DcaQiXtxxhu/",
+		post: "https://www.instagram.com/sunrin_ssf/p/DcaOmAcH5Cb/",
+		video: "https://www.instagram.com/reel/DcaQiXtxxhu/",
 	},
 };
 
@@ -105,7 +105,7 @@ function CampIntro({ detail }) {
 								<div className="flex gap-4">
 									<a
 										className="w-[47px] h-[47px] bg-[#F7347E] rounded-full flex justify-center items-center cursor-pointer"
-										href={socialLinks[detail.link]?.instagram}
+										href={socialLinks[detail.link]?.post}
 										target="_blank"
 										rel="noopener noreferrer"
 									>
@@ -113,7 +113,7 @@ function CampIntro({ detail }) {
 									</a>
 									<a
 										className="w-[47px] h-[47px] bg-[#F7347E] rounded-full flex justify-center items-center cursor-pointer"
-										href={socialLinks[detail.link]?.reel}
+										href={socialLinks[detail.link]?.video}
 										target="_blank"
 										rel="noopener noreferrer"
 									>
@@ -132,7 +132,7 @@ function CampIntro({ detail }) {
 						<div className="flex gap-4">
 							<a
 								className="lg:w-[47px] lg:h-[47px] w-10 h-10 bg-[#F7347E] rounded-full flex justify-center items-center cursor-pointer"
-								href={socialLinks[detail.link]?.instagram}
+								href={socialLinks[detail.link]?.post}
 								target="_blank"
 								rel="noopener noreferrer"
 							>
@@ -143,7 +143,7 @@ function CampIntro({ detail }) {
 							</a>
 							<a
 								className="lg:w-[47px] lg:h-[47px] w-10 h-10 bg-[#F7347E] rounded-full flex justify-center items-center cursor-pointer"
-								href={socialLinks[detail.link]?.reel}
+								href={socialLinks[detail.link]?.video}
 								target="_blank"
 								rel="noopener noreferrer"
 							>
