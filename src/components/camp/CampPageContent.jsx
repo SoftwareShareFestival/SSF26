@@ -259,7 +259,7 @@ export default function CampPageContent({ id }) {
       `}
 			</style>
 			<section className="flex flex-col gap-4 bg-[#F0EFF3]" id={id}>
-				<h1 className="mt-8 text-center text-2xl md:text-3xl font-bold text-[#ff3b8d] pt-20">
+				<h1 className="mt-8 text-center text-3xl font-bold text-[#ff3b8d] pt-20">
 					캠프 소개
 				</h1>
 				<p className="text-center text-[#333] font-bold text-base md:text-lg max-w-[800px] pb-4 mx-auto px-4 break-keep">

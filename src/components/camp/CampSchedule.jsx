@@ -1,8 +1,8 @@
 function CapmSchedule() {
 	return (
 		<div className="flex flex-col w-full h-auto items-center justify-center py-[146px] px-6 max-w-[var(--content-max)] mx-auto gap-15">
-			<div className="flex flex-col text-center font-extrabold gap-3.75">
-				<div className="text-3xl text-[#F7347E]">캠프 일정</div>
+			<div className="flex flex-col text-center gap-3.75">
+				<div className="text-3xl font-bold text-[#F7347E]">캠프 일정</div>
 				<div className="text-[#202330] font-bold">
 					지원을 통해 지원자를 선별 후 캠프를 진행합니다!
 				</div>
