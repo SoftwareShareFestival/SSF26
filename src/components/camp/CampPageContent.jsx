@@ -1,10 +1,19 @@
 import { useEffect, useState, useRef } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { Link } from "react-router";
+
+const campCategories = [
+	{ value: "all", label: "전체" },
+	{ value: "security", label: "정보보호과" },
+	{ value: "software", label: "소프트웨어과" },
+];
+
+const categoryEase = [0.22, 1, 0.36, 1];
 
 export default function CampPageContent({ id }) {
 	const [selectedCategory, setSelectedCategory] = useState("all");
 	const [isMobileDevice, setIsMobileDevice] = useState(false);
+	const shouldReduceMotion = useReducedMotion();
 
 	useEffect(() => {
 		const userAgent = typeof navigator !== "undefined" ? navigator.userAgent : "";
@@ -259,39 +268,49 @@ export default function CampPageContent({ id }) {
 
 				<div className="w-full max-w-[980px] mx-auto px-[50px] mb-8">
 					<div className="flex justify-center gap-3 mb-6 flex-nowrap">
-						<button
-							onClick={() => setSelectedCategory("all")}
-							className={`px-3 py-1 md:px-4 md:py-2 rounded-full text-sm md:text-base font-semibold whitespace-nowrap transition-all ${
-								selectedCategory === "all"
-									? "bg-[#ff3b8d] text-white"
-									: "border border-[#E6E6EA] text-[#333] font-medium"
-							}`}
-						>
-							전체
-						</button>
-						<button
-							onClick={() => setSelectedCategory("security")}
-							className={`px-3 py-1 md:px-4 md:py-2 rounded-full text-sm md:text-base font-semibold whitespace-nowrap transition-all ${
-								selectedCategory === "security"
-									? "bg-[#ff3b8d] text-white"
-									: "border border-[#E6E6EA] text-[#333] font-medium"
-							}`}
-						>
-							정보보호과
-						</button>
-						<button
-							onClick={() => setSelectedCategory("software")}
-							className={`px-3 py-1 md:px-4 md:py-2 rounded-full text-sm md:text-base font-semibold whitespace-nowrap transition-all ${
-								selectedCategory === "software"
-									? "bg-[#ff3b8d] text-white"
-									: "border border-[#E6E6EA] text-[#333] font-medium"
-							}`}
-						>
-							소프트웨어과
-						</button>
+						{campCategories.map((category) => {
+							const isSelected = selectedCategory === category.value;
+
+							return (
+								<button
+									key={category.value}
+									type="button"
+									onClick={() => setSelectedCategory(category.value)}
+									aria-pressed={isSelected}
+									className={`relative isolate overflow-hidden rounded-full border px-3 py-1 text-sm font-semibold whitespace-nowrap transition-colors duration-300 md:px-4 md:py-2 md:text-base ${
+										isSelected
+											? "border-transparent text-white"
+											: "border-[#E6E6EA] text-[#333]"
+									}`}
+								>
+									{isSelected && (
+										<motion.span
+											layoutId="active-camp-category"
+											className="absolute inset-0 z-0 rounded-full bg-[#ff3b8d]"
+											transition={{
+												duration: shouldReduceMotion ? 0 : 0.4,
+												ease: categoryEase,
+											}}
+										/>
+									)}
+									<span className="relative z-10">{category.label}</span>
+								</button>
+							);
+						})}
 					</div>
 
-					{isMobileDevice ? (
+					<AnimatePresence mode="wait" initial={false}>
+						<motion.div
+							key={`${isMobileDevice ? "mobile" : "desktop"}-${selectedCategory}`}
+							initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
+							animate={{ opacity: 1, y: 0 }}
+							exit={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: -8 }}
+							transition={{
+								duration: shouldReduceMotion ? 0 : 0.35,
+								ease: categoryEase,
+							}}
+						>
+							{isMobileDevice ? (
 						<div className="camp-scrollbar pb-2 px-2">
 							<div className="relative overflow-hidden">
 								<motion.div
@@ -456,7 +475,9 @@ export default function CampPageContent({ id }) {
 								);
 							})}
 						</div>
-					)}
+							)}
+						</motion.div>
+					</AnimatePresence>
 				</div>
 			</section>
 		</>
