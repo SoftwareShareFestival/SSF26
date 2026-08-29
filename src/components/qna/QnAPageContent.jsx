@@ -24,7 +24,7 @@ const qnaItems = [
 	{
 		key: "resultCheck",
 		question: "참가 신청 선정 결과는 어떻게 확인하나요?",
-		answer: "선정 결과는 9월 9일 본교 홈페이지와 개인 메시지를 통해 안내드립니다.",
+		answer: "선정 결과는 9월 8일 본교 홈페이지와 개인 메시지를 통해 안내드립니다.",
 		categoryColor: "text-[#ff3b8d]",
 	},
 	{
