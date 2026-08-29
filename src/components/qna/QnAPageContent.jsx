@@ -5,7 +5,7 @@ const qnaItems = [
 	{
 		key: "apply",
 		question: "참가 신청은 어떻게 하나요?",
-		answer: "참가 신청은 9월 6일까지 웹사이트에서 할 수 있습니다.",
+		answer: "참가 신청은 8월 31일부터 9월 6일까지 웹사이트에서 할 수 있습니다.",
 		categoryColor: "text-[#ff3b8d]",
 	},
 	{
