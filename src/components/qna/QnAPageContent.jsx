@@ -5,7 +5,7 @@ const qnaItems = [
 	{
 		key: "apply",
 		question: "참가 신청은 어떻게 하나요?",
-		answer: "참가 신청은 9월 6일까지 웹사이트에서 할 수 있습니다.",
+		answer: "참가 신청은 8월 31일부터 9월 6일까지 웹사이트에서 할 수 있습니다.",
 		categoryColor: "text-[#ff3b8d]",
 	},
 	{
@@ -24,7 +24,7 @@ const qnaItems = [
 	{
 		key: "resultCheck",
 		question: "참가 신청 선정 결과는 어떻게 확인하나요?",
-		answer: "선정 결과는 9월 9일 본교 홈페이지와 개인 메시지를 통해 안내드립니다.",
+		answer: "선정 결과는 추후 본교 홈페이지와 개인 메시지를 통해 안내드립니다.",
 		categoryColor: "text-[#ff3b8d]",
 	},
 	{
