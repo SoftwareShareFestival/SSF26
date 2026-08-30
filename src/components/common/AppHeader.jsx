@@ -12,7 +12,7 @@ import {
 } from "@/components/animate-ui/components/radix/alert-dialog";
 
 const applicationUrl = "https://luma.com/jnvzlvkc";
-const applicationOpenAt = new Date("2026-08-31T12:00:00+09:00").getTime();
+const applicationOpenAt = new Date("2026-08-31T00:00:00+09:00").getTime();
 
 function getRemainingTime() {
 	return Math.max(applicationOpenAt - Date.now(), 0);
