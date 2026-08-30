@@ -12,7 +12,7 @@ import {
 } from "@/components/animate-ui/components/radix/alert-dialog";
 
 const applicationUrl = "https://luma.com/jnvzlvkc";
-const applicationOpenAt = new Date("2026-08-31T12:00:00+09:00").getTime();
+const applicationOpenAt = new Date("2026-08-31T00:00:00+09:00").getTime();
 
 function getRemainingTime() {
 	return Math.max(applicationOpenAt - Date.now(), 0);
@@ -82,7 +82,7 @@ export default function AppHeader() {
 									지원 오픈을 기다려주세요
 								</AlertDialogTitle>
 								<AlertDialogDescription className="text-base leading-7 text-slate-600">
-									지원은 8월 31일 정오부터 가능합니다.
+									지원은 8월 31일 자정부터 가능합니다.
 								</AlertDialogDescription>
 							</AlertDialogHeader>
 
