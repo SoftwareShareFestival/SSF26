@@ -82,7 +82,7 @@ export default function AppHeader() {
 									지원 오픈을 기다려주세요
 								</AlertDialogTitle>
 								<AlertDialogDescription className="text-base leading-7 text-slate-600">
-									지원은 8월 31일 정오부터 가능합니다.
+									지원은 8월 31일 자정부터 가능합니다.
 								</AlertDialogDescription>
 							</AlertDialogHeader>
 
