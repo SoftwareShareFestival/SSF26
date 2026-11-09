@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router";
 import {
 	AlertDialog,
@@ -10,7 +11,39 @@ import {
 	AlertDialogTrigger,
 } from "@/components/animate-ui/components/radix/alert-dialog";
 
+const applicationUrl = "https://luma.com/jnvzlvkc";
+const applicationOpenAt = new Date("2026-08-31T00:00:00+09:00").getTime();
+
+function getRemainingTime() {
+	return Math.max(applicationOpenAt - Date.now(), 0);
+}
+
+function getCountdownParts(remainingTime) {
+	const totalSeconds = Math.ceil(remainingTime / 1000);
+
+	return [
+		{ label: "일", value: Math.floor(totalSeconds / 86400) },
+		{ label: "시간", value: Math.floor((totalSeconds % 86400) / 3600) },
+		{ label: "분", value: Math.floor((totalSeconds % 3600) / 60) },
+		{ label: "초", value: totalSeconds % 60 },
+	];
+}
+
 export default function AppHeader() {
+	const [remainingTime, setRemainingTime] = useState(getRemainingTime);
+	const isApplicationOpen = remainingTime <= 0;
+	const countdownParts = getCountdownParts(remainingTime);
+
+	useEffect(() => {
+		if (isApplicationOpen) return undefined;
+
+		const timer = window.setInterval(() => {
+			setRemainingTime(getRemainingTime());
+		}, 1000);
+
+		return () => window.clearInterval(timer);
+	}, [isApplicationOpen]);
+
 	return (
 		<header className="sticky top-0 z-30 border-b border-white/8 bg-[#171b34]/92 backdrop-blur-md">
 			<div className="mx-auto flex w-full max-w-[1440px] items-center justify-between px-6 py-4 md:px-10 md:py-5">
