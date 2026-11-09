@@ -98,7 +98,7 @@ function Footer() {
 									개발
 								</span>
 								<div className="flex flex-wrap gap-x-3 gap-y-0.5 text-sm sm:text-base font-medium text-[#171B2E]">
-									<DeveloperCredit label="PIXELHIZE" tooltip="김하준" />
+									<DeveloperCredit label="김하준" tooltip="김하준" />
 									<DeveloperCredit label="김우찬" tooltip="woojak" />
 									<DeveloperCredit label="김서준" tooltip="1325OK" />
 								</div>

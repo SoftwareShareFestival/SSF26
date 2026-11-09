@@ -51,69 +51,45 @@ export default function AppHeader() {
 					<img src="/SSF2026.svg" alt="SSF 2026" className="h-7 w-auto md:h-9" />
 				</Link>
 
-				{isApplicationOpen ? (
-					<a
-						href={applicationUrl}
-						target="_blank"
-						rel="noopener noreferrer"
-						className="inline-flex h-11 items-center justify-center rounded-full bg-[#ff3b8d] px-5 text-sm font-bold leading-none text-white transition-colors duration-200 hover:bg-[#ff4b95] cursor-pointer"
-					>
-						지원하기
-					</a>
-				) : (
-					<AlertDialog>
-						<AlertDialogTrigger asChild>
-							<button
-								type="button"
-								className="inline-flex h-11 items-center justify-center rounded-full bg-[#ff3b8d] px-5 text-sm font-bold leading-none text-white transition-colors duration-200 hover:bg-[#ff4b95] cursor-pointer"
-							>
-								지원하기
-							</button>
-						</AlertDialogTrigger>
+					<button
+							type="button"
+							onClick={() => { window.location.href = 'https://www.youtube.com/watch?v=5fVqrtvAW88'; }}
+  							className="inline-flex h-11 items-center justify-center rounded-full bg-[#ff3b8d] px-5 text-sm font-bold leading-none text-white transition-colors duration-200 hover:bg-[#ff4b95] cursor-pointer"
+						>
+							후기 영상
+						</button>
+				{/* <AlertDialog>
+					<AlertDialogTrigger asChild>
+						<button
+							type="button"
+							className="inline-flex h-11 items-center justify-center rounded-full bg-[#ff3b8d] px-5 text-sm font-bold leading-none text-white transition-colors duration-200 hover:bg-[#ff4b95] cursor-pointer"
+						>
+							지원하기
+						</button>
+					</AlertDialogTrigger>
 
-						<AlertDialogContent className="!max-w-[440px] !rounded-[28px] !border !border-slate-200 !bg-white !p-8 !shadow-[0_28px_100px_rgba(23,27,52,0.24)]">
-							<AlertDialogHeader className="items-center text-center">
-								<img
-									src="/SSF2026.svg"
-									alt="SSF 2026"
-									className="mx-auto h-auto w-[92px]"
-								/>
-								<AlertDialogTitle className="text-2xl font-semibold tracking-tight text-[#171b34]">
-									지원 오픈을 기다려주세요
-								</AlertDialogTitle>
-								<AlertDialogDescription className="text-base leading-7 text-slate-600">
-									지원은 8월 31일 자정부터 가능합니다.
-								</AlertDialogDescription>
-							</AlertDialogHeader>
+					<AlertDialogContent className="!max-w-[440px] !rounded-[28px] !border !border-slate-200 !bg-white !p-8 !shadow-[0_28px_100px_rgba(23,27,52,0.24)]">
+						<AlertDialogHeader className="items-center text-center">
+							<img
+								src="/SSF2026.svg"
+								alt="SSF 2026"
+								className="mx-auto h-auto w-[92px]"
+							/>
+							<AlertDialogTitle className="text-2xl font-semibold tracking-tight text-[#171b34]">
+								지원 기간 안내
+							</AlertDialogTitle>
+							<AlertDialogDescription className="text-base leading-7 text-slate-600">
+								아직은 지원 기간이 아닙니다.
+							</AlertDialogDescription>
+						</AlertDialogHeader>
 
-							<div
-								role="timer"
-								aria-label="지원 오픈까지 남은 시간"
-								className="grid grid-cols-4 gap-2"
-							>
-								{countdownParts.map((part) => (
-									<div
-										key={part.label}
-										className="flex min-w-0 flex-col items-center rounded-2xl bg-[#f6f4f8] px-2 py-4"
-									>
-										<span className="font-mono text-2xl font-bold tabular-nums text-[#171b34]">
-											{String(part.value).padStart(2, "0")}
-										</span>
-										<span className="mt-1 text-xs font-semibold text-slate-500">
-											{part.label}
-										</span>
-									</div>
-								))}
-							</div>
-
-							<AlertDialogFooter className="!mt-2 !justify-center">
-								<AlertDialogAction className="!inline-flex !h-12 !min-w-[112px] !items-center !justify-center !rounded-full !border-0 !bg-[#ff3b8d] !px-6 !text-sm !font-semibold !leading-none !text-white !shadow-none transition-colors duration-200 hover:!bg-[#ff4b95] cursor-pointer">
-									확인
-								</AlertDialogAction>
-							</AlertDialogFooter>
-						</AlertDialogContent>
-					</AlertDialog>
-				)}
+						<AlertDialogFooter className="!mt-4 !justify-center">
+							<AlertDialogAction className="!inline-flex !h-12 !min-w-[112px] !items-center !justify-center !rounded-full !border-0 !bg-[#ff3b8d] !px-6 !text-sm !font-semibold !leading-none !text-white !shadow-none transition-colors duration-200 hover:!bg-[#ff4b95]">
+								확인
+							</AlertDialogAction>
+						</AlertDialogFooter>
+					</AlertDialogContent>
+				</AlertDialog> */}
 			</div>
 		</header>
 	);

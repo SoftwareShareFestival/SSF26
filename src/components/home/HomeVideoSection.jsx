@@ -6,7 +6,7 @@ export default function HomeVideoSection() {
 					<div className="aspect-video w-full">
 						<iframe
 							className="h-full w-full"
-							src="https://www.youtube.com/embed/JolGCZP6BTs"
+							src="https://www.youtube.com/embed/5fVqrtvAW88"
 							title="SSF video"
 							loading="lazy"
 							referrerPolicy="strict-origin-when-cross-origin"
