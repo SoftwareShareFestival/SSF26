@@ -18,7 +18,14 @@ export default function AppHeader() {
 					<img src="/SSF2026.svg" alt="SSF 2026" className="h-7 w-auto md:h-9" />
 				</Link>
 
-				<AlertDialog>
+					<button
+							type="button"
+							onClick={() => { window.location.href = 'https://www.youtube.com/watch?v=5fVqrtvAW88'; }}
+  							className="inline-flex h-11 items-center justify-center rounded-full bg-[#ff3b8d] px-5 text-sm font-bold leading-none text-white transition-colors duration-200 hover:bg-[#ff4b95] cursor-pointer"
+						>
+							후기 영상
+						</button>
+				{/* <AlertDialog>
 					<AlertDialogTrigger asChild>
 						<button
 							type="button"
@@ -49,7 +56,7 @@ export default function AppHeader() {
 							</AlertDialogAction>
 						</AlertDialogFooter>
 					</AlertDialogContent>
-				</AlertDialog>
+				</AlertDialog> */}
 			</div>
 		</header>
 	);
